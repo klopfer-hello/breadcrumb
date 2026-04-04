@@ -1,0 +1,24 @@
+## Interface: 20505
+## Title: |cFF4CAF50Breadcrumb|r - Quest Guide
+## Notes: Step-by-step quest guide with directional arrow for TBC Anniversary.
+## Author: Klopfer-Hello
+## Version: 0.1.0
+## SavedVariables: BreadcrumbDB
+## SavedVariablesPerCharacter: BreadcrumbCharDB
+## IconTexture: Interface\AddOns\Breadcrumb\media\icon.blp
+
+# https://warcraft.wiki.gg/wiki/Addon_Categories
+## Category: Quests
+## Category-deDE: Quests
+## Category-esES: Misiones
+## Category-esMX: Misiones
+## Category-frFR: Quêtes
+## Category-itIT: Missioni
+## Category-koKR: 퀘스트
+## Category-ptBR: Missões
+## Category-ruRU: Задания
+## Category-zhCN: 任务
+## Category-zhTW: 任務
+
+# Core
+Core.lua

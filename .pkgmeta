@@ -1,0 +1,13 @@
+package-as: Breadcrumb
+
+manual-changelog:
+  filename: CHANGELOG.md
+  markup-type: markdown
+
+ignore:
+  - .git
+  - .gitignore
+  - .claude
+  - .pkgmeta
+  - CLAUDE.md
+  - tools
