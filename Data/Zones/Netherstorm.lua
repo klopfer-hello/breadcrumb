@@ -52,6 +52,7 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10174,
         name = "Curse of the Violet Tower",
+        useItem = 28455,
         steps = {
             {
                 type = "talk",
@@ -134,6 +135,7 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10182,
         name = "Battle-Mage Dathric",
+        useItem = 28351,
         steps = {
             {
                 type = "travel",
@@ -691,6 +693,7 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10209,
         name = "Summoner Kanthin's Prize",
+        useItem = 28455,
         steps = {
             {
                 type = "kill",
@@ -1906,6 +1909,7 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10301,
         name = "Unlocking the Compendium",
+        useItem = 28455,
         steps = {
             {
                 type = "collect",
@@ -1929,6 +1933,7 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10305,
         name = "Abjurist Belmara",
+        useItem = 28336,
         steps = {
             {
                 type = "collect",
@@ -1966,6 +1971,7 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10306,
         name = "Conjurer Luminrath",
+        useItem = 28352,
         steps = {
             {
                 type = "travel",
@@ -1996,6 +2002,7 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10307,
         name = "Cohlien Frostweaver",
+        useItem = 28353,
         steps = {
             {
                 type = "travel",
@@ -3685,6 +3692,7 @@ BC.QuestData:RegisterZone(1953, {
         id = 10507,
         name = "Turning Point",
         group = 2,
+        useItem = 30260,
         steps = {
             {
                 type = "kill",
@@ -4503,6 +4511,7 @@ BC.QuestData:RegisterZone(1953, {
         id = 10409,
         name = "Deathblow to the Legion",
         group = 5,
+        useItem = 29796,
         prereq = 10410,
         steps = {
             {
