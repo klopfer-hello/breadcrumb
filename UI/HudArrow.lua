@@ -160,7 +160,8 @@ function M:UpdateArrow()
     if not frame or not frame:IsShown() then return end
 
     local questData, _, stepData = BC.StepResolver:GetActiveStep()
-    if not stepData or not stepData.mapX or not stepData.mapY then
+    if not stepData or not stepData.mapX or not stepData.mapY
+       or (stepData.mapX == 0 and stepData.mapY == 0) then
         frame.arrow:Hide()
         frame.dist:SetText("")
         frame.zoneHint:Hide()

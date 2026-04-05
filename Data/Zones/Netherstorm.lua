@@ -431,6 +431,7 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10191,
         name = "Mark V is Alive!",
+        group = 2,
         steps = {
             {
                 type = "travel",
@@ -460,28 +461,6 @@ BC.QuestData:RegisterZone(1953, {
                 mapX = 0.314,
                 mapY = 0.566,
                 npc = "Bot-Specialist Alley",
-            },
-        },
-    },
-    -- ========================================================================
-    -- Krasus's Compendium chain
-    -- ========================================================================
-    {
-        id = 10192,
-        name = "Krasus's Compendium",
-        steps = {
-            {
-                type = "collect",
-                description = "Bring Krasus's Compendium to Archmage Vargoth",
-                mapX = 0.000,
-                mapY = 0.000,
-                objective = 1,
-            },
-            {
-                type = "turnin",
-                description = "Turn in quest",
-                mapX = 0.000,
-                mapY = 0.000,
             },
         },
     },
@@ -1350,6 +1329,7 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10247,
         name = "Doctor Vomisa, Ph.T.",
+        group = 3,
         steps = {
             {
                 type = "travel",
@@ -1380,6 +1360,7 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10248,
         name = "You, Robot",
+        group = 3,
         useItem = 29949,
         steps = {
             {
@@ -1436,6 +1417,7 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10256,
         name = "Finding the Keymaster",
+        group = 2,
         steps = {
             {
                 type = "travel",
@@ -1529,6 +1511,7 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10261,
         name = "Wanted: Annihilator Servo!",
+        group = 2,
         steps = {
             {
                 type = "travel",
@@ -2021,6 +2004,7 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10276,
         name = "Full Triangle",
+        group = 2,
         steps = {
             {
                 type = "talk",
@@ -2059,6 +2043,7 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10290,
         name = "In Search of Farahlite",
+        group = 2,
         steps = {
             {
                 type = "collect",
@@ -2105,6 +2090,7 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10293,
         name = "Hitting the Motherlode",
+        group = 2,
         steps = {
             {
                 type = "kill",
@@ -2347,6 +2333,7 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10310,
         name = "Sabotage the Warp-Gate!",
+        group = 3,
         steps = {
             {
                 type = "talk",
@@ -2610,6 +2597,7 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10320,
         name = "Destroy Naberius!",
+        group = 3,
         steps = {
             {
                 type = "travel",
@@ -2897,6 +2885,7 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10337,
         name = "When the Cows Come Home",
+        group = 2,
         steps = {
             {
                 type = "travel",
@@ -4059,6 +4048,7 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10439,
         name = "Dimensius the All-Devouring",
+        group = 5,
         steps = {
             {
                 type = "talk",
@@ -4174,6 +4164,7 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10508,
         name = "A Gift for Voren'thal",
+        group = 2,
         steps = {
             {
                 type = "collect",
@@ -4244,6 +4235,7 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10701,
         name = "Breaking Down Netherock",
+        group = 2,
         steps = {
             {
                 type = "kill",
@@ -4967,6 +4959,7 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10407,
         name = "Socrethar's Shadow",
+        group = 2,
         prereq = 10381,
         next = 10410,
         steps = {
@@ -5106,6 +5099,46 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Use Vargoth's Staff to turn in",
                 mapX = 0.510,
                 mapY = 0.800,
+                hint = "Use the staff from your bags to summon Image of Archmage Vargoth",
+            },
+        },
+    },
+    {
+        id = 10192,
+        name = "Krasus's Compendium",
+        useItem = 28455,
+        prereq = 10188,
+        next = 10301,
+        steps = {
+            {
+                type = "collect",
+                description = "Krasus's Compendium - Chapter 1",
+                mapX = 0.578,
+                mapY = 0.864,
+                objective = 1,
+                hint = "Inside a ruined building in Kirin'Var Village",
+            },
+            {
+                type = "collect",
+                description = "Krasus's Compendium - Chapter 2",
+                mapX = 0.560,
+                mapY = 0.841,
+                objective = 2,
+                hint = "On the ground floor of a building near the chapel",
+            },
+            {
+                type = "collect",
+                description = "Krasus's Compendium - Chapter 3",
+                mapX = 0.586,
+                mapY = 0.896,
+                objective = 3,
+                hint = "Near the southern part of Kirin'Var Village",
+            },
+            {
+                type = "interact",
+                description = "Use Vargoth's Staff to turn in",
+                mapX = 0.586,
+                mapY = 0.896,
                 hint = "Use the staff from your bags to summon Image of Archmage Vargoth",
             },
         },
