@@ -132,5 +132,14 @@ function M:Initialize()
         M:Update()
     end)
 
+    BC.Events:Register("QUEST_LOG_UPDATE", function()
+        M:Update()
+    end)
+
+    -- Initial update after a short delay (SavedVariables need to load first)
+    C_Timer.After(1, function()
+        M:Update()
+    end)
+
     BC:Debug("ItemBar initialized")
 end

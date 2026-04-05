@@ -957,30 +957,23 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10233,
         name = "Torching Sunfury Hold",
+        useItem = 28550,
         steps = {
             {
-                type = "collect",
-                description = "Collect a Torch from Sunfury Flamekeepers",
+                type = "interact",
+                description = "Destroy Sunfury Ballista",
                 mapX = 0.576,
                 mapY = 0.862,
                 objective = 1,
-                hint = "Only need one torch; drops from Flamekeepers patrolling the camp",
+                hint = "Arrow-firing contraptions near archers on upper levels",
             },
             {
                 type = "interact",
-                description = "Torch 4 Sunfury Tents",
+                description = "Torch Sunfury Tents",
                 mapX = 0.576,
                 mapY = 0.862,
                 objective = 2,
-                hint = "Torch once, wait for fire to stop, then torch again. Repeat x4",
-            },
-            {
-                type = "interact",
-                description = "Destroy 2 Sunfury Ballista",
-                mapX = 0.576,
-                mapY = 0.862,
-                objective = 3,
-                hint = "Ballista are arrow-firing contraptions near archers on upper levels",
+                hint = "Loot a torch from Sunfury Flamekeepers first, then use on tents",
             },
             {
                 type = "turnin",
