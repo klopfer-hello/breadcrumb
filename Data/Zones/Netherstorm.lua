@@ -12,7 +12,6 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10173,
         name = "The Archmage's Staff",
-        useItem = 28514,
         steps = {
             {
                 type = "interact",
@@ -359,7 +358,6 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10190,
         name = "Recharging the Batteries",
-        useItem = 29940,
         steps = {
             {
                 type = "interact",
@@ -1210,7 +1208,6 @@ BC.QuestData:RegisterZone(1953, {
         id = 10248,
         name = "You, Robot",
         group = 3,
-        useItem = 29949,
         steps = {
             {
                 type = "interact",
@@ -1741,7 +1738,6 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10275,
         name = "Triangulation Point Two",
-        useItem = 29099,
         steps = {
             {
                 type = "travel",
@@ -2351,7 +2347,6 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10329,
         name = "Shutting Down Manaforge B'naar",
-        useItem = 29396,
         steps = {
             {
                 type = "kill",
@@ -2480,7 +2475,6 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10334,
         name = "Needs More Cowbell",
-        useItem = 9316,
         steps = {
             {
                 type = "interact",
@@ -2902,7 +2896,6 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10385,
         name = "Potential for Brain Damage = High",
-        useItem = 29482,
         steps = {
             {
                 type = "collect",
@@ -3059,7 +3052,6 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10411,
         name = "Electro-Shock Goodness!",
-        useItem = 30703,
         steps = {
             {
                 type = "collect",
@@ -3302,7 +3294,6 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10426,
         name = "Flora of the Eco-Domes",
-        useItem = 31084,
         steps = {
             {
                 type = "interact",
@@ -3583,7 +3574,7 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10438,
         name = "On Nethery Wings",
-        useItem = 29519,
+        useItem = 29778,
         steps = {
             {
                 type = "interact",
@@ -3894,7 +3885,6 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10857,
         name = "Teleport This!",
-        useItem = 31088,
         steps = {
             {
                 type = "interact",
@@ -4115,7 +4105,7 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10313,
         name = "Measuring Warp Energies",
-        useItem = 30362,
+        useItem = 29324,
         prereq = 10241,
         next = 10243,
         steps = {
