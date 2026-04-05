@@ -191,14 +191,6 @@ BC.QuestData:RegisterZone(1953, {
                 objective = 2,
             },
             {
-                type = "talk",
-                description = "Speak with Rocket-Chief Fuselage",
-                mapX = 0.326,
-                mapY = 0.648,
-                objective = 3,
-                hint = "Avoid accepting 'You're Hired!' before this quest",
-            },
-            {
                 type = "turnin",
                 description = "Return to Rocket-Chief Fuselage",
                 mapX = 0.326,
@@ -262,13 +254,6 @@ BC.QuestData:RegisterZone(1953, {
                 objective = 3,
             },
             {
-                type = "travel",
-                description = "Return to Custodian Dieworth",
-                mapX = 0.574,
-                mapY = 0.862,
-                objective = 4,
-            },
-            {
                 type = "turnin",
                 description = "Return to Custodian Dieworth",
                 mapX = 0.574,
@@ -325,13 +310,6 @@ BC.QuestData:RegisterZone(1953, {
                 hint = "Multiple crystals located around coordinates 34,52",
             },
             {
-                type = "talk",
-                description = "Return to Rocket-Chief Fuselage",
-                mapX = 0.326,
-                mapY = 0.648,
-                objective = 2,
-            },
-            {
                 type = "turnin",
                 description = "Return to Rocket-Chief Fuselage",
                 mapX = 0.326,
@@ -353,13 +331,6 @@ BC.QuestData:RegisterZone(1953, {
                 mapX = 0.576,
                 mapY = 0.862,
                 objective = 1,
-            },
-            {
-                type = "talk",
-                description = "Speak with Archmage Vargoth and deliver the message about progress with the village",
-                mapX = 0.576,
-                mapY = 0.862,
-                objective = 2,
             },
             {
                 type = "turnin",
@@ -481,13 +452,6 @@ BC.QuestData:RegisterZone(1953, {
                 hint = "Check inside the building and around the beam near the large pipe",
             },
             {
-                type = "talk",
-                description = "Return to Spymaster Thalodien",
-                mapX = 0.320,
-                mapY = 0.640,
-                objective = 2,
-            },
-            {
                 type = "turnin",
                 description = "Return to Spymaster Thalodien",
                 mapX = 0.320,
@@ -509,14 +473,6 @@ BC.QuestData:RegisterZone(1953, {
                 mapX = 0.320,
                 mapY = 0.640,
                 objective = 1,
-            },
-            {
-                type = "talk",
-                description = "Talk to Veronia",
-                mapX = 0.338,
-                mapY = 0.642,
-                objective = 2,
-                hint = "Veronia is next to Flight Master, outside Area 52",
             },
             {
                 type = "turnin",
@@ -559,13 +515,6 @@ BC.QuestData:RegisterZone(1953, {
                 hint = "Researchers are found further away, mining rocks",
             },
             {
-                type = "talk",
-                description = "Return to Caledis Brightdawn",
-                mapX = 0.482,
-                mapY = 0.866,
-                objective = 4,
-            },
-            {
                 type = "turnin",
                 description = "Return to Caledis Brightdawn",
                 mapX = 0.482,
@@ -581,14 +530,6 @@ BC.QuestData:RegisterZone(1953, {
         id = 10198,
         name = "Information Gathering",
         steps = {
-            {
-                type = "talk",
-                description = "Eavesdrop on the two guards at Manaforge Duro",
-                mapX = 0.482,
-                mapY = 0.866,
-                objective = 1,
-                hint = "Stand directly on top of the guards; Pathaleon won't aggro but Annihilators will",
-            },
             {
                 type = "turnin",
                 description = "Return to Caledis Brightdawn",
@@ -630,14 +571,6 @@ BC.QuestData:RegisterZone(1953, {
         name = "Return to Thalodien",
         steps = {
             {
-                type = "travel",
-                description = "Travel to Spymaster Thalodien",
-                mapX = 0.320,
-                mapY = 0.640,
-                objective = 1,
-                hint = "Goblin engineers can use Dimensional Ripper to Area 52",
-            },
-            {
                 type = "turnin",
                 description = "Return to Spymaster Thalodien",
                 mapX = 0.320,
@@ -667,13 +600,6 @@ BC.QuestData:RegisterZone(1953, {
                 mapY = 0.416,
                 objective = 2,
                 hint = "Located on the southern side against the building",
-            },
-            {
-                type = "talk",
-                description = "Talk to Magister Theledorn",
-                mapX = 0.262,
-                mapY = 0.416,
-                objective = 3,
             },
             {
                 type = "turnin",
@@ -960,13 +886,6 @@ BC.QuestData:RegisterZone(1953, {
                 hint = "Immune to arcane damage; avoid arcane spells",
             },
             {
-                type = "talk",
-                description = "Return to Chief Engineer Trep",
-                mapX = 0.324,
-                mapY = 0.666,
-                objective = 5,
-            },
-            {
                 type = "turnin",
                 description = "Return to Chief Engineer Trep",
                 mapX = 0.324,
@@ -982,13 +901,6 @@ BC.QuestData:RegisterZone(1953, {
         id = 10225,
         name = "Report to Engineering",
         steps = {
-            {
-                type = "talk",
-                description = "Talk to Chief Engineer Trep",
-                mapX = 0.324,
-                mapY = 0.666,
-                objective = 1,
-            },
             {
                 type = "turnin",
                 description = "Return to Chief Engineer Trep",
@@ -1020,13 +932,6 @@ BC.QuestData:RegisterZone(1953, {
                 mapY = 0.666,
                 objective = 2,
                 hint = "Blue shards drop on the ground near killed elementals",
-            },
-            {
-                type = "talk",
-                description = "Return to Chief Engineer Trep",
-                mapX = 0.324,
-                mapY = 0.666,
-                objective = 3,
             },
             {
                 type = "turnin",
@@ -1208,13 +1113,6 @@ BC.QuestData:RegisterZone(1953, {
                 objective = 1,
             },
             {
-                type = "talk",
-                description = "Talk to Rocket-Chief Fuselage",
-                mapX = 0.326,
-                mapY = 0.648,
-                objective = 2,
-            },
-            {
                 type = "turnin",
                 description = "Return to Rocket-Chief Fuselage",
                 mapX = 0.326,
@@ -1237,13 +1135,6 @@ BC.QuestData:RegisterZone(1953, {
                 mapY = 0.820,
                 objective = 1,
                 hint = "Fast respawn rate. Try inside Manaforge Coruu for fewer mobs",
-            },
-            {
-                type = "talk",
-                description = "Return to Lieutenant-Sorcerer Morran",
-                mapX = 0.576,
-                mapY = 0.862,
-                objective = 2,
             },
             {
                 type = "turnin",
@@ -1340,13 +1231,6 @@ BC.QuestData:RegisterZone(1953, {
                 objective = 1,
             },
             {
-                type = "talk",
-                description = "Talk to Doctor Vomisa, Ph.T.",
-                mapX = 0.372,
-                mapY = 0.638,
-                objective = 2,
-            },
-            {
                 type = "turnin",
                 description = "Return to Doctor Vomisa, Ph.T.",
                 mapX = 0.372,
@@ -1396,13 +1280,6 @@ BC.QuestData:RegisterZone(1953, {
         id = 10249,
         name = "Back to the Chief!",
         steps = {
-            {
-                type = "talk",
-                description = "Return to Rocket-Chief Fuselage",
-                mapX = 0.326,
-                mapY = 0.648,
-                objective = 1,
-            },
             {
                 type = "turnin",
                 description = "Return to Rocket-Chief Fuselage",
@@ -1530,13 +1407,6 @@ BC.QuestData:RegisterZone(1953, {
                 hint = "Big yellow robot at 25, 65. Can be soloed with DoT and banish.",
             },
             {
-                type = "talk",
-                description = "Return to Papa Wheeler",
-                mapX = 0.330,
-                mapY = 0.646,
-                objective = 3,
-            },
-            {
                 type = "turnin",
                 description = "Return to Papa Wheeler",
                 mapX = 0.330,
@@ -1560,13 +1430,6 @@ BC.QuestData:RegisterZone(1953, {
                 mapY = 0.642,
                 objective = 1,
                 hint = "Quest is repeatable for Consortium reputation",
-            },
-            {
-                type = "talk",
-                description = "Return to Nether-Stalker Khay'ji",
-                mapX = 0.324,
-                mapY = 0.642,
-                objective = 2,
             },
             {
                 type = "turnin",
@@ -1614,14 +1477,6 @@ BC.QuestData:RegisterZone(1953, {
                 objective = 1,
             },
             {
-                type = "talk",
-                description = "Talk to Gahruj",
-                mapX = 0.476,
-                mapY = 0.570,
-                objective = 2,
-                hint = "Gahruj is in the eco-dome",
-            },
-            {
                 type = "turnin",
                 description = "Return to Gahruj",
                 mapX = 0.466,
@@ -1638,13 +1493,6 @@ BC.QuestData:RegisterZone(1953, {
         name = "Assisting the Consortium",
         steps = {
             {
-                type = "talk",
-                description = "Talk to Anchorite Karja",
-                mapX = 0.320,
-                mapY = 0.642,
-                objective = 1,
-            },
-            {
                 type = "turnin",
                 description = "Return to Nether-Stalker Khay'ji",
                 mapX = 0.324,
@@ -1658,14 +1506,6 @@ BC.QuestData:RegisterZone(1953, {
         name = "Assisting the Consortium",
         next = 10265,
         steps = {
-            {
-                type = "talk",
-                description = "Talk to Spymaster Thalodien or Nether-Stalker Khay'ji",
-                mapX = 0.320,
-                mapY = 0.640,
-                objective = 1,
-                hint = "Scryers faction - may need Consortium reputation",
-            },
             {
                 type = "turnin",
                 description = "Return to Nether-Stalker Khay'ji",
@@ -1697,13 +1537,6 @@ BC.QuestData:RegisterZone(1953, {
                 mapY = 0.730,
                 objective = 2,
                 hint = "Pentatharon drops the crystal at coordinates 42,73",
-            },
-            {
-                type = "talk",
-                description = "Return the crystal to Nether-Stalker Khay'ji",
-                mapX = 0.324,
-                mapY = 0.642,
-                objective = 3,
             },
             {
                 type = "turnin",
@@ -1752,13 +1585,6 @@ BC.QuestData:RegisterZone(1953, {
                 mapY = 0.350,
                 objective = 1,
                 hint = "Located in the eastern part of Stormspire, top level of a building",
-            },
-            {
-                type = "talk",
-                description = "Approach the Image of Nexus-Prince Haramad",
-                mapX = 0.458,
-                mapY = 0.360,
-                objective = 2,
             },
             {
                 type = "turnin",
@@ -1984,13 +1810,6 @@ BC.QuestData:RegisterZone(1953, {
                 hint = "Stand directly in the hunter's mark that appears",
             },
             {
-                type = "travel",
-                description = "Return to Wind Trader Tuluman at the bridge",
-                mapX = 0.346,
-                mapY = 0.378,
-                objective = 3,
-            },
-            {
                 type = "turnin",
                 description = "Return to Wind Trader Tuluman",
                 mapX = 0.346,
@@ -2055,13 +1874,6 @@ BC.QuestData:RegisterZone(1953, {
                 hint = "Giants around 40,66 - soloable with proper gear/spec",
             },
             {
-                type = "talk",
-                description = "Return to Zuben Elgenubi",
-                mapX = 0.440,
-                mapY = 0.360,
-                objective = 2,
-            },
-            {
                 type = "turnin",
                 description = "Return to Zuben Elgenubi",
                 mapX = 0.440,
@@ -2110,13 +1922,6 @@ BC.QuestData:RegisterZone(1953, {
                 hint = "Drops from Cragskaar after defeat",
             },
             {
-                type = "travel",
-                description = "Return to Zuben Elgenubi",
-                mapX = 0.440,
-                mapY = 0.360,
-                objective = 3,
-            },
-            {
                 type = "turnin",
                 description = "Return to Zuben Elgenubi",
                 mapX = 0.440,
@@ -2139,13 +1944,6 @@ BC.QuestData:RegisterZone(1953, {
                 mapY = 0.530,
                 objective = 1,
                 hint = "If drop rate is poor, try abandoning and re-accepting the quest",
-            },
-            {
-                type = "talk",
-                description = "Return to Ravandwyr",
-                mapX = 0.314,
-                mapY = 0.662,
-                objective = 2,
             },
             {
                 type = "turnin",
@@ -2376,14 +2174,6 @@ BC.QuestData:RegisterZone(1953, {
                 hint = "Drijya may move around the area, check nearby locations",
             },
             {
-                type = "talk",
-                description = "Find and speak with Drijya",
-                mapX = 0.480,
-                mapY = 0.634,
-                objective = 2,
-                hint = "He may move from place to place after initial contact",
-            },
-            {
                 type = "turnin",
                 description = "Return to Drijya",
                 mapX = 0.480,
@@ -2406,13 +2196,6 @@ BC.QuestData:RegisterZone(1953, {
                 mapY = 0.780,
                 objective = 1,
                 hint = "Aggro Tormented Souls to transform them; low drop rate, mobs are tough",
-            },
-            {
-                type = "talk",
-                description = "Return to Custodian Dieworth",
-                mapX = 0.574,
-                mapY = 0.862,
-                objective = 2,
             },
             {
                 type = "turnin",
@@ -2510,14 +2293,6 @@ BC.QuestData:RegisterZone(1953, {
                 mapY = 0.422,
                 objective = 3,
                 hint = "Follow main path inside the cave",
-            },
-            {
-                type = "talk",
-                description = "Talk to Foreman Sundown",
-                mapX = 0.264,
-                mapY = 0.422,
-                objective = 4,
-                hint = "He's just inside the cave entrance",
             },
             {
                 type = "turnin",
@@ -2714,13 +2489,6 @@ BC.QuestData:RegisterZone(1953, {
                 hint = "Dropped by Kirin'Var Apprentices east of quest giver",
             },
             {
-                type = "talk",
-                description = "Return to Apprentice Andrethan",
-                mapX = 0.576,
-                mapY = 0.852,
-                objective = 2,
-            },
-            {
                 type = "turnin",
                 description = "Return to Apprentice Andrethan",
                 mapX = 0.576,
@@ -2767,14 +2535,6 @@ BC.QuestData:RegisterZone(1953, {
         id = 10333,
         name = "Help Mama Wheeler",
         steps = {
-            {
-                type = "talk",
-                description = "Talk to Mama Wheeler",
-                mapX = 0.466,
-                mapY = 0.566,
-                objective = 1,
-                hint = "Located in Area 52. Requires completing 'Pick Your Part' first",
-            },
             {
                 type = "turnin",
                 description = "Return to Mama Wheeler",
@@ -3061,13 +2821,6 @@ BC.QuestData:RegisterZone(1953, {
                 hint = "The mana bomb fragment is a large round bulb",
             },
             {
-                type = "talk",
-                description = "Return to Lieutenant-Sorcerer Morran",
-                mapX = 0.576,
-                mapY = 0.862,
-                objective = 3,
-            },
-            {
                 type = "turnin",
                 description = "Return to Lieutenant-Sorcerer Morran",
                 mapX = 0.576,
@@ -3106,13 +2859,6 @@ BC.QuestData:RegisterZone(1953, {
                 mapY = 0.450,
                 objective = 3,
                 hint = "Avoid AoE spells that pierce walls to prevent aggro",
-            },
-            {
-                type = "talk",
-                description = "Return to Agent Araxes",
-                mapX = 0.594,
-                mapY = 0.450,
-                objective = 4,
             },
             {
                 type = "turnin",
@@ -3169,13 +2915,6 @@ BC.QuestData:RegisterZone(1953, {
                 mapY = 0.416,
                 objective = 2,
                 hint = "Use Reflection of Ya-six guardian. Go south and around to upper level",
-            },
-            {
-                type = "talk",
-                description = "Return to Commander Ameer",
-                mapX = 0.594,
-                mapY = 0.324,
-                objective = 3,
             },
             {
                 type = "turnin",
@@ -3482,14 +3221,6 @@ BC.QuestData:RegisterZone(1953, {
                 hint = "Equipment location varies slightly (48,54-48,55)",
             },
             {
-                type = "talk",
-                description = "Return to Mehrdad with the diagnostic results",
-                mapX = 0.464,
-                mapY = 0.564,
-                objective = 3,
-                hint = "Mehrdad is at the starting location",
-            },
-            {
                 type = "turnin",
                 description = "Return to Mehrdad",
                 mapX = 0.464,
@@ -3577,13 +3308,6 @@ BC.QuestData:RegisterZone(1953, {
                 hint = "Flight point available for convenient travel",
             },
             {
-                type = "talk",
-                description = "Report to Ghabar at the Stormspire",
-                mapX = 0.434,
-                mapY = 0.350,
-                objective = 3,
-            },
-            {
                 type = "turnin",
                 description = "Return to Ghabar",
                 mapX = 0.434,
@@ -3606,13 +3330,6 @@ BC.QuestData:RegisterZone(1953, {
                 mapY = 0.268,
                 objective = 1,
                 hint = "Check Eco-Dome Sutheron Generator at 47,26-48,27",
-            },
-            {
-                type = "talk",
-                description = "Return diagnostics results to Mehrdad",
-                mapX = 0.434,
-                mapY = 0.350,
-                objective = 2,
             },
             {
                 type = "turnin",
@@ -3749,13 +3466,6 @@ BC.QuestData:RegisterZone(1953, {
                 objective = 3,
             },
             {
-                type = "travel",
-                description = "Return to Aurine Moonblaze",
-                mapX = 0.422,
-                mapY = 0.326,
-                objective = 4,
-            },
-            {
                 type = "turnin",
                 description = "Return to Aurine Moonblaze",
                 mapX = 0.422,
@@ -3792,13 +3502,6 @@ BC.QuestData:RegisterZone(1953, {
                 mapX = 0.446,
                 mapY = 0.144,
                 objective = 3,
-            },
-            {
-                type = "talk",
-                description = "Return to Tashar with the prototype",
-                mapX = 0.446,
-                mapY = 0.144,
-                objective = 4,
             },
             {
                 type = "turnin",
@@ -3840,13 +3543,6 @@ BC.QuestData:RegisterZone(1953, {
                 hint = "Drop rate ~30%, found on mobs throughout the mine",
             },
             {
-                type = "talk",
-                description = "Report back to Spymaster Thalodien",
-                mapX = 0.320,
-                mapY = 0.640,
-                objective = 4,
-            },
-            {
                 type = "turnin",
                 description = "Return to Spymaster Thalodien",
                 mapX = 0.320,
@@ -3871,13 +3567,6 @@ BC.QuestData:RegisterZone(1953, {
                 hint = "Loosely spread around the dome, ~70% drop rate",
             },
             {
-                type = "talk",
-                description = "Speak with Shauly Pore",
-                mapX = 0.464,
-                mapY = 0.560,
-                objective = 2,
-            },
-            {
                 type = "turnin",
                 description = "Return to Shauly Pore",
                 mapX = 0.464,
@@ -3900,13 +3589,6 @@ BC.QuestData:RegisterZone(1953, {
                 mapY = 0.366,
                 objective = 1,
                 hint = "Located at top of Stormspire in Netherstorm",
-            },
-            {
-                type = "talk",
-                description = "Speak with Audi the Needle and introduce yourself from Shauly",
-                mapX = 0.448,
-                mapY = 0.366,
-                objective = 2,
             },
             {
                 type = "turnin",
@@ -4090,13 +3772,6 @@ BC.QuestData:RegisterZone(1953, {
                 objective = 1,
             },
             {
-                type = "talk",
-                description = "Talk to Ghabar",
-                mapX = 0.434,
-                mapY = 0.350,
-                objective = 2,
-            },
-            {
                 type = "turnin",
                 description = "Return to Ghabar",
                 mapX = 0.434,
@@ -4112,13 +3787,6 @@ BC.QuestData:RegisterZone(1953, {
         id = 10441,
         name = "Peddling the Goods",
         steps = {
-            {
-                type = "talk",
-                description = "Talk to the Cenarion Expedition's representative to offer them generator parts at a reasonable price",
-                mapX = 0.448,
-                mapY = 0.366,
-                objective = 1,
-            },
             {
                 type = "turnin",
                 description = "Turn in quest",
@@ -4190,13 +3858,6 @@ BC.QuestData:RegisterZone(1953, {
                 mapY = 0.640,
                 objective = 3,
                 hint = "Use fear and stuns to control the elite mobs",
-            },
-            {
-                type = "talk",
-                description = "Return to Spymaster Thalodien with Socrethar's Teleportation Stone",
-                mapX = 0.320,
-                mapY = 0.640,
-                objective = 4,
             },
             {
                 type = "turnin",
@@ -4424,13 +4085,6 @@ BC.QuestData:RegisterZone(1953, {
                 hint = "Located in Stormspire, Netherstorm",
             },
             {
-                type = "talk",
-                description = "Speak with Commander Ameer",
-                mapX = 0.594,
-                mapY = 0.324,
-                objective = 2,
-            },
-            {
                 type = "turnin",
                 description = "Return to Commander Ameer",
                 mapX = 0.594,
@@ -4460,13 +4114,6 @@ BC.QuestData:RegisterZone(1953, {
                 mapX = 0.594,
                 mapY = 0.324,
                 objective = 2,
-            },
-            {
-                type = "talk",
-                description = "Speak with Commander Ameer",
-                mapX = 0.594,
-                mapY = 0.324,
-                objective = 3,
             },
             {
                 type = "turnin",
@@ -4517,13 +4164,6 @@ BC.QuestData:RegisterZone(1953, {
                 hint = "Repeatable quest for 250 Consortium rep per turnin",
             },
             {
-                type = "talk",
-                description = "Return to Commander Ameer",
-                mapX = 0.594,
-                mapY = 0.324,
-                objective = 2,
-            },
-            {
                 type = "turnin",
                 description = "Return to Commander Ameer",
                 mapX = 0.594,
@@ -4546,13 +4186,6 @@ BC.QuestData:RegisterZone(1953, {
                 mapY = 0.324,
                 objective = 1,
                 hint = "Drop rate is low (~5%), may require farming many mobs",
-            },
-            {
-                type = "talk",
-                description = "Bring the 5 Ethereum Prison Keys to Commander Ameer",
-                mapX = 0.594,
-                mapY = 0.324,
-                objective = 2,
             },
             {
                 type = "turnin",
@@ -4864,14 +4497,6 @@ BC.QuestData:RegisterZone(1953, {
         next = 10323,
         steps = {
             {
-                type = "travel",
-                description = "Travel to Kaylaan",
-                mapX = 0.348,
-                mapY = 0.382,
-                hint = "Located at the tree-looking icon on the map, west of Stormspire just before the bridge",
-                npc = "Kaylaan",
-            },
-            {
                 type = "turnin",
                 description = "Turn in to Kaylaan",
                 mapX = 0.348,
@@ -4997,14 +4622,6 @@ BC.QuestData:RegisterZone(1953, {
         prereq = 10407,
         next = 10409,
         steps = {
-            {
-                type = "travel",
-                description = "Travel to Shattrath City",
-                mapID = 3703,
-                mapX = 0.296,
-                mapY = 0.140,
-                hint = "Ishanah is located in Shattrath City",
-            },
             {
                 type = "turnin",
                 description = "Turn in to Ishanah",

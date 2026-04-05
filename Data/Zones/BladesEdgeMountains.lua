@@ -23,13 +23,6 @@ BC.QuestData:RegisterZone(1949, {
                 hint = "Quest may be unfinished in log from earlier in zone",
             },
             {
-                type = "talk",
-                description = "Speak with Grok",
-                mapX = 0.652,
-                mapY = 0.680,
-                objective = 2,
-            },
-            {
                 type = "turnin",
                 description = "Return to Grok",
                 mapX = 0.652,
@@ -262,13 +255,6 @@ BC.QuestData:RegisterZone(1949, {
         name = "Speak with Mog'dorg",
         prereq = 11000,
         steps = {
-            {
-                type = "talk",
-                description = "Speak with Mog'dorg the Wizened",
-                mapX = 0.554,
-                mapY = 0.448,
-                objective = 1,
-            },
             {
                 type = "turnin",
                 description = "Return to Mog'dorg the Wizened",
