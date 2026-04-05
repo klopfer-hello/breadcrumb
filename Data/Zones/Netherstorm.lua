@@ -4491,7 +4491,7 @@ BC.QuestData:RegisterZone(1953, {
             {
                 type = "turnin",
                 description = "Turn in to Ishanah",
-                mapID = 3703,
+                mapID = 1955,
                 mapX = 0.296,
                 mapY = 0.140,
                 npc = "Ishanah",
