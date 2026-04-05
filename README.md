@@ -13,11 +13,11 @@ Shows objectives and directions for quests already in your log — designed for 
 - "Travel to: Zone Name" hint when objective is in another zone
 - Quest chain auto-advance on turnin
 - Clickable quest item button (e.g. Archmage Vargoth's Staff)
-- Wowhead URL popup for quick quest lookup
+- Quest lookup URL popup for quick reference
 - Group quest indicator `[5]`
 - Minimap button (left-click: toggle, right-click: toggle arrow)
 - Minimize tracker to title bar (hides arrow too)
-- AI-enriched quest data with natural language hints
+- Curated quest data with natural language hints
 - Syling Tracker-inspired dark theme UI
 
 ## Compatibility

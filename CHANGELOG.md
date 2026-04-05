@@ -13,7 +13,7 @@
 - **Cross-zone support** — per-step `mapID` override for objectives in different zones; "Travel to: Zone Name" hint when player is in wrong zone
 - **Quest chain auto-advance** — turning in a chain quest auto-selects the next quest
 - **Item bar** — standalone clickable quest item button (SecureActionButtonTemplate) for quests with usable items
-- **Wowhead popup** — click icon to copy quest URL for quick lookup
+- **Quest lookup popup** — click icon to copy quest URL for quick reference
 - **Group quest indicator** — `[N]` shown after quest name
 - **Minimap button** — left-click toggle tracker, right-click toggle arrow, draggable
 - **Minimize** — collapse tracker to title bar, hides arrow
