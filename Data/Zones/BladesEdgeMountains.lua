@@ -165,18 +165,11 @@ BC.QuestData:RegisterZone(1949, {
         next = 11000,
         steps = {
             {
-                type = "travel",
-                description = "Travel to Mog'dorg the Wizened",
-                mapX = 0.554,
-                mapY = 0.448,
-                objective = 1,
-            },
-            {
                 type = "interact",
                 description = "Summon Vim'gol the Vile",
                 mapX = 0.554,
                 mapY = 0.448,
-                objective = 2,
+                objective = 1,
                 hint = "Requires 4-5 players to summon and shrink him",
             },
             {
@@ -184,7 +177,7 @@ BC.QuestData:RegisterZone(1949, {
                 description = "Defeat Vim'gol the Vile",
                 mapX = 0.554,
                 mapY = 0.448,
-                objective = 3,
+                objective = 2,
                 hint = "Can nuke him down even if he enrages at 50%",
             },
             {
@@ -192,7 +185,7 @@ BC.QuestData:RegisterZone(1949, {
                 description = "Take the grimoire from Vim'gol's corpse",
                 mapX = 0.554,
                 mapY = 0.448,
-                objective = 4,
+                objective = 3,
                 hint = "Grimoire drops on ground; anyone can pick it up",
             },
             {

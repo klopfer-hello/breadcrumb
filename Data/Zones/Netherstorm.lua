@@ -77,19 +77,11 @@ BC.QuestData:RegisterZone(1953, {
         name = "Ar'kelos the Guardian",
         steps = {
             {
-                type = "travel",
-                description = "Travel to the tower next to Archmage Vargoth",
-                mapX = 0.582,
-                mapY = 0.864,
-                objective = 1,
-                hint = "Big tower with electric fence outside",
-            },
-            {
                 type = "interact",
                 description = "Interact with Ar'kelos the Guardian at the top of the tower",
                 mapX = 0.576,
                 mapY = 0.862,
-                objective = 2,
+                objective = 1,
                 hint = "Climb to the very top of the tower",
             },
             {
@@ -406,25 +398,18 @@ BC.QuestData:RegisterZone(1953, {
         group = 2,
         steps = {
             {
-                type = "travel",
-                description = "Go to Bot-Specialist Alley",
-                mapX = 0.314,
-                mapY = 0.566,
-                objective = 1,
-            },
-            {
                 type = "interact",
                 description = "Activate Maxx A. Million Mk. V",
                 mapX = 0.314,
                 mapY = 0.566,
-                objective = 2,
+                objective = 1,
             },
             {
                 type = "kill",
                 description = "Protect Maxx A. Million Mk. V while he collects 3 items in the city",
                 mapX = 0.314,
                 mapY = 0.566,
-                objective = 3,
+                objective = 2,
                 hint = "Let him tank, clear adds before starting if possible",
             },
             {
@@ -1061,25 +1046,18 @@ BC.QuestData:RegisterZone(1953, {
         name = "Declawing Doomclaw",
         steps = {
             {
-                type = "travel",
-                description = "Travel to Mama Wheeler",
-                mapX = 0.466,
-                mapY = 0.566,
-                objective = 1,
-            },
-            {
                 type = "talk",
                 description = "Talk to Mama Wheeler",
                 mapX = 0.466,
                 mapY = 0.566,
-                objective = 2,
+                objective = 1,
             },
             {
                 type = "travel",
                 description = "Travel to Doomclaw",
                 mapX = 0.500,
                 mapY = 0.570,
-                objective = 3,
+                objective = 2,
                 hint = "Fast respawn (2 min 10 sec), may need to wait",
             },
             {
@@ -1087,7 +1065,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Kill Doomclaw",
                 mapX = 0.500,
                 mapY = 0.570,
-                objective = 4,
+                objective = 3,
             },
             {
                 type = "turnin",
@@ -1223,13 +1201,6 @@ BC.QuestData:RegisterZone(1953, {
         name = "Doctor Vomisa, Ph.T.",
         group = 3,
         steps = {
-            {
-                type = "travel",
-                description = "Travel to Doctor Vomisa, Ph.T.",
-                mapX = 0.372,
-                mapY = 0.638,
-                objective = 1,
-            },
             {
                 type = "turnin",
                 description = "Return to Doctor Vomisa, Ph.T.",
@@ -1523,19 +1494,11 @@ BC.QuestData:RegisterZone(1953, {
         name = "Consortium Crystal Collection",
         steps = {
             {
-                type = "travel",
-                description = "Travel to Nether-Stalker Khay'ji in Netherstorm",
-                mapX = 0.324,
-                mapY = 0.642,
-                objective = 1,
-                hint = "He's on a stage near the entrance, look to the right as you go up the road",
-            },
-            {
                 type = "kill",
                 description = "Defeat Pentatharon to obtain the crystal",
                 mapX = 0.420,
                 mapY = 0.730,
-                objective = 2,
+                objective = 1,
                 hint = "Pentatharon drops the crystal at coordinates 42,73",
             },
             {
@@ -2239,19 +2202,11 @@ BC.QuestData:RegisterZone(1953, {
         name = "Searching for Evidence",
         steps = {
             {
-                type = "travel",
-                description = "Travel to the barn at Necromantic Focus",
-                mapX = 0.603,
-                mapY = 0.780,
-                objective = 1,
-                hint = "The barn is located at coordinates 60, 78",
-            },
-            {
                 type = "interact",
                 description = "Interact with the glowing orb on the pedestal",
                 mapX = 0.603,
                 mapY = 0.780,
-                objective = 2,
+                objective = 1,
                 hint = "The orb sits atop a square-shaped pedestal in the barn",
             },
             {
@@ -2505,18 +2460,11 @@ BC.QuestData:RegisterZone(1953, {
         name = "Master Smith Rhonsus",
         steps = {
             {
-                type = "talk",
-                description = "Talk to Apprentice Andrethan",
-                mapX = 0.576,
-                mapY = 0.852,
-                objective = 1,
-            },
-            {
                 type = "kill",
                 description = "Kill Master Smith Rhonsus",
                 mapX = 0.610,
                 mapY = 0.850,
-                objective = 2,
+                objective = 1,
                 hint = "Roams near 60,85 with quick respawn timer",
             },
             {
@@ -2553,18 +2501,11 @@ BC.QuestData:RegisterZone(1953, {
         useItem = 9316,
         steps = {
             {
-                type = "travel",
-                description = "Travel to Bessy's location",
-                mapX = 0.592,
-                mapY = 0.788,
-                objective = 1,
-            },
-            {
                 type = "interact",
                 description = "Use the cowbell on Bessy",
                 mapX = 0.592,
                 mapY = 0.788,
-                objective = 2,
+                objective = 1,
                 hint = "Bessy is located at coordinates 59, 79",
             },
             {
@@ -3583,14 +3524,6 @@ BC.QuestData:RegisterZone(1953, {
         name = "The Dynamic Duo",
         steps = {
             {
-                type = "travel",
-                description = "Travel to Audi the Needle at Stormspire",
-                mapX = 0.448,
-                mapY = 0.366,
-                objective = 1,
-                hint = "Located at top of Stormspire in Netherstorm",
-            },
-            {
                 type = "turnin",
                 description = "Return to Audi the Needle",
                 mapX = 0.448,
@@ -3688,32 +3621,25 @@ BC.QuestData:RegisterZone(1953, {
         useItem = 29519,
         steps = {
             {
-                type = "travel",
-                description = "Travel to Professor Dabiri",
-                mapX = 0.600,
-                mapY = 0.318,
-                objective = 1,
-            },
-            {
                 type = "interact",
                 description = "Ride the Netherdrake next to Professor Dabiri",
                 mapX = 0.600,
                 mapY = 0.318,
-                objective = 2,
+                objective = 1,
             },
             {
                 type = "travel",
                 description = "Fly to Manaforge Ultris",
                 mapX = 0.600,
                 mapY = 0.318,
-                objective = 3,
+                objective = 2,
             },
             {
                 type = "interact",
                 description = "Use the Phase Disruptor bomb on Manaforge Ultris",
                 mapX = 0.600,
                 mapY = 0.318,
-                objective = 4,
+                objective = 3,
                 hint = "Spam click the bomb in your bag when over the target area",
             },
             {
@@ -3804,18 +3730,11 @@ BC.QuestData:RegisterZone(1953, {
         group = 2,
         steps = {
             {
-                type = "talk",
-                description = "Speak with Voren'thal the Seer",
-                mapX = 0.426,
-                mapY = 0.914,
-                objective = 1,
-            },
-            {
                 type = "kill",
                 description = "Defeat Kael'thas Sunstrider",
                 mapX = 0.426,
                 mapY = 0.914,
-                objective = 2,
+                objective = 1,
                 hint = "Use the provided item for 300% damage boost",
             },
             {
@@ -4076,14 +3995,6 @@ BC.QuestData:RegisterZone(1953, {
         id = 10969,
         name = "Seek Out Ameer",
         steps = {
-            {
-                type = "travel",
-                description = "Travel to Commander Ameer at Stormspire",
-                mapX = 0.594,
-                mapY = 0.324,
-                objective = 1,
-                hint = "Located in Stormspire, Netherstorm",
-            },
             {
                 type = "turnin",
                 description = "Return to Commander Ameer",
