@@ -613,6 +613,11 @@ function M:Initialize()
 
     BC.Events:Register("STEPS_UPDATED", function()
         if not minimized then
+            -- Auto-expand the selected quest
+            local selected = BC.StepResolver:GetSelectedQuest()
+            if selected then
+                expandedQuest = selected
+            end
             M:UpdateTracker()
         end
     end)
