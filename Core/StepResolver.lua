@@ -10,8 +10,11 @@ local M = {}
 BC.StepResolver = M
 
 -- Per-quest state, keyed by questID
--- { [questID] = { questLogIndex, questInLog, questComplete, activeStepIndex, objectives } }
+-- { [questID] = { questLogIndex, questInLog, questComplete, activeStepIndex, objectives, reachedSteps } }
 local questStates = {}
+
+-- Proximity threshold in yards for auto-advancing travel/talk steps
+local ARRIVAL_DISTANCE = 40
 
 -- Which quest the arrow points to
 local selectedQuestID = nil
@@ -111,11 +114,20 @@ function M:ResolveAllSteps()
             if qs.questComplete then
                 qs.activeStepIndex = #steps
             else
+                if not qs.reachedSteps then qs.reachedSteps = {} end
                 qs.activeStepIndex = #steps  -- fallback to turnin
                 for i, step in ipairs(steps) do
                     if step.objective then
+                        -- Objective step: check quest log completion
                         local obj = qs.objectives[step.objective]
                         if obj and not obj.done then
+                            qs.activeStepIndex = i
+                            break
+                        end
+                    elseif step.type ~= "turnin" then
+                        -- Non-objective step (travel/talk/interact without objective):
+                        -- active until player reaches the location
+                        if not qs.reachedSteps[i] then
                             qs.activeStepIndex = i
                             break
                         end
@@ -223,6 +235,61 @@ function M:IsQuestInLog()
 end
 
 -- ============================================================================
+-- Proximity check for non-objective steps (travel/talk/interact)
+-- ============================================================================
+
+local mapDataCache = {}
+
+local function GetMapData(uiMapID)
+    if mapDataCache[uiMapID] then return mapDataCache[uiMapID] end
+    local v0 = CreateVector2D(0, 0)
+    local v5 = CreateVector2D(0.5, 0.5)
+    local _, tl = C_Map.GetWorldPosFromMapPos(uiMapID, v0)
+    local _, ct = C_Map.GetWorldPosFromMapPos(uiMapID, v5)
+    if not tl or not ct then return nil end
+    local top, left = tl:GetXY()
+    local bot, right = ct:GetXY()
+    local w = (left - right) * 2
+    local h = (top - bot) * 2
+    if w == 0 or h == 0 then return nil end
+    mapDataCache[uiMapID] = { width = w, height = h, left = left, top = top }
+    return mapDataCache[uiMapID]
+end
+
+function M:CheckProximity()
+    -- Only check the selected quest's active step
+    if not selectedQuestID then return end
+    local questData = BC.QuestData:GetQuest(selectedQuestID)
+    local qs = questStates[selectedQuestID]
+    if not questData or not qs or not qs.activeStepIndex then return end
+
+    local step = questData.steps[qs.activeStepIndex]
+    if not step then return end
+
+    -- Only check non-objective steps
+    if step.objective or step.type == "turnin" then return end
+    if step.mapX == 0 and step.mapY == 0 then return end
+
+    local stepMapID = step.mapID or questData.mapID
+    local py, px = UnitPosition("player")
+    if not px or not py then return end
+
+    local md = GetMapData(stepMapID)
+    if not md then return end
+
+    local tx = md.left - md.width * step.mapX
+    local ty = md.top - md.height * step.mapY
+    local dist = math.sqrt((px - tx)^2 + (py - ty)^2)
+
+    if dist < ARRIVAL_DISTANCE then
+        if not qs.reachedSteps then qs.reachedSteps = {} end
+        qs.reachedSteps[qs.activeStepIndex] = true
+        BC:Debug("Reached step " .. qs.activeStepIndex .. ": " .. step.description)
+        M:ResolveAllSteps()
+    end
+end
+
+-- ============================================================================
 -- Initialization
 -- ============================================================================
 
@@ -283,6 +350,17 @@ function M:Initialize()
     -- Initial scan
     M:ScanAllQuests()
     M:ResolveAllSteps()
+
+    -- Periodic proximity check for travel/talk steps (every 2 seconds)
+    local proximityFrame = CreateFrame("Frame")
+    local elapsed = 0
+    proximityFrame:SetScript("OnUpdate", function(self, dt)
+        elapsed = elapsed + dt
+        if elapsed >= 2.0 then
+            elapsed = 0
+            M:CheckProximity()
+        end
+    end)
 
     BC:Debug("StepResolver initialized, tracking " .. #trackedQuests .. " quests")
 end
