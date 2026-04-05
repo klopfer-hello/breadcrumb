@@ -1113,6 +1113,7 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10240,
         name = "Building a Perimeter",
+        useItem = 28725,
         steps = {
             {
                 type = "interact",

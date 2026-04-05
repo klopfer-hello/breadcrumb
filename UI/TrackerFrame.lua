@@ -65,6 +65,14 @@ local function CreateMainFrame()
     frame:SetScript("OnDragStart", function(self) self:StartMoving() end)
     frame:SetScript("OnDragStop", function(self)
         self:StopMovingOrSizing()
+        -- Re-anchor from top-left so frame always grows downward
+        local left = self:GetLeft()
+        local top = self:GetTop()
+        local parentTop = UIParent:GetTop()
+        if left and top and parentTop then
+            self:ClearAllPoints()
+            self:SetPoint("TOPLEFT", UIParent, "TOPLEFT", left, top - parentTop)
+        end
         if BC.db and BC.db.settings then
             local point, _, relPoint, x, y = self:GetPoint()
             BC.db.settings.trackerPosition = { point, relPoint, x, y }
