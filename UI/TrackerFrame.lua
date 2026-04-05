@@ -34,6 +34,10 @@ local QUEST_SPACING = 6
 local STEP_SPACING = 3
 local INDICATOR_SIZE = 8
 local FRAME_WIDTH = 280
+local DEFAULT_HEIGHT = 300
+local MIN_HEIGHT = 80
+local MAX_HEIGHT = 800
+local SCROLLBAR_WIDTH = 6
 
 local frame
 local questEntries = {}  -- reusable quest entry frames
@@ -46,8 +50,11 @@ local collapsedZones = {}  -- { [mapID] = true } for collapsed zones
 -- ============================================================================
 
 local function CreateMainFrame()
+    -- Load saved height
+    local savedHeight = BC.db and BC.db.settings and BC.db.settings.trackerHeight or DEFAULT_HEIGHT
+
     frame = CreateFrame("Frame", "BreadcrumbTracker", UIParent, BackdropTemplateMixin and "BackdropTemplate" or nil)
-    frame:SetSize(FRAME_WIDTH, 60)
+    frame:SetSize(FRAME_WIDTH, savedHeight)
     frame:SetPoint("TOPRIGHT", UIParent, "TOPRIGHT", -30, -200)
     frame:SetFrameStrata("MEDIUM")
     frame:SetClampedToScreen(true)
@@ -81,7 +88,7 @@ local function CreateMainFrame()
     frame.title:SetTextColor(D.title[1], D.title[2], D.title[3])
     frame.title:SetText("Breadcrumb")
 
-    -- Minimize button (right side of title bar)
+    -- Minimize button
     frame.minimizeBtn = CreateFrame("Button", nil, frame)
     frame.minimizeBtn:SetSize(14, 14)
     frame.minimizeBtn:SetPoint("TOPRIGHT", frame, "TOPRIGHT", -PADDING, -PADDING + 2)
@@ -101,11 +108,131 @@ local function CreateMainFrame()
         M:ToggleMinimize()
     end)
 
-    -- Content container
-    frame.content = CreateFrame("Frame", nil, frame)
-    frame.content:SetPoint("TOPLEFT", frame.title, "BOTTOMLEFT", 0, -6)
-    frame.content:SetPoint("RIGHT", frame, "RIGHT", -PADDING, 0)
+    -- ================================================================
+    -- ScrollFrame + scrollable content
+    -- ================================================================
+    local titleHeight = 20  -- approximate title + padding
+
+    frame.scrollFrame = CreateFrame("ScrollFrame", nil, frame)
+    frame.scrollFrame:SetPoint("TOPLEFT", frame, "TOPLEFT", PADDING, -titleHeight)
+    frame.scrollFrame:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -(PADDING + SCROLLBAR_WIDTH + 2), PADDING)
+    frame.scrollFrame:EnableMouseWheel(true)
+
+    -- Scrollable content child
+    frame.content = CreateFrame("Frame", nil, frame.scrollFrame)
+    frame.content:SetWidth(FRAME_WIDTH - PADDING * 2 - SCROLLBAR_WIDTH - 2)
     frame.content:SetHeight(1)
+    frame.scrollFrame:SetScrollChild(frame.content)
+
+    -- Mouse wheel scrolling
+    frame.scrollFrame:SetScript("OnMouseWheel", function(self, delta)
+        local current = self:GetVerticalScroll()
+        local maxScroll = math.max(0, frame.content:GetHeight() - self:GetHeight())
+        local newScroll = math.max(0, math.min(maxScroll, current - delta * 30))
+        self:SetVerticalScroll(newScroll)
+        M:UpdateScrollbar()
+    end)
+
+    -- ================================================================
+    -- Scrollbar (thin, Syling Tracker style)
+    -- ================================================================
+    frame.scrollbar = CreateFrame("Frame", nil, frame)
+    frame.scrollbar:SetWidth(SCROLLBAR_WIDTH)
+    frame.scrollbar:SetPoint("TOPRIGHT", frame, "TOPRIGHT", -2, -titleHeight)
+    frame.scrollbar:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -2, PADDING)
+
+    -- Scrollbar track
+    frame.scrollbar.track = frame.scrollbar:CreateTexture(nil, "BACKGROUND")
+    frame.scrollbar.track:SetAllPoints()
+    frame.scrollbar.track:SetTexture("Interface\\Buttons\\WHITE8X8")
+    frame.scrollbar.track:SetVertexColor(D.bg[1], D.bg[2], D.bg[3], 0.3)
+
+    -- Scrollbar thumb
+    frame.scrollbar.thumb = CreateFrame("Frame", nil, frame.scrollbar)
+    frame.scrollbar.thumb:SetWidth(SCROLLBAR_WIDTH)
+    frame.scrollbar.thumb:SetHeight(30)
+    frame.scrollbar.thumb:SetPoint("TOP", frame.scrollbar, "TOP", 0, 0)
+
+    frame.scrollbar.thumb.tex = frame.scrollbar.thumb:CreateTexture(nil, "ARTWORK")
+    frame.scrollbar.thumb.tex:SetAllPoints()
+    frame.scrollbar.thumb.tex:SetTexture("Interface\\Buttons\\WHITE8X8")
+    frame.scrollbar.thumb.tex:SetVertexColor(D.title[1], D.title[2], D.title[3], 0.5)
+
+    -- Thumb dragging
+    frame.scrollbar.thumb:EnableMouse(true)
+    frame.scrollbar.thumb:SetScript("OnMouseDown", function(self)
+        local _, cursorY = GetCursorPosition()
+        local scale = frame:GetEffectiveScale()
+        self.dragStartY = cursorY / scale
+        self.dragStartScroll = frame.scrollFrame:GetVerticalScroll()
+        self:SetScript("OnUpdate", function(self)
+            local _, newY = GetCursorPosition()
+            newY = newY / scale
+            local delta = self.dragStartY - newY
+            local trackHeight = frame.scrollbar:GetHeight()
+            local contentHeight = frame.content:GetHeight()
+            local scrollHeight = frame.scrollFrame:GetHeight()
+            local maxScroll = math.max(0, contentHeight - scrollHeight)
+            local scrollPerPixel = maxScroll / math.max(1, trackHeight - self:GetHeight())
+            local newScroll = math.max(0, math.min(maxScroll, self.dragStartScroll + delta * scrollPerPixel))
+            frame.scrollFrame:SetVerticalScroll(newScroll)
+            M:UpdateScrollbar()
+        end)
+    end)
+    frame.scrollbar.thumb:SetScript("OnMouseUp", function(self)
+        self:SetScript("OnUpdate", nil)
+    end)
+
+    frame.scrollbar:Hide()
+
+    -- ================================================================
+    -- Resize handle (bottom edge)
+    -- ================================================================
+    frame.resizeHandle = CreateFrame("Frame", nil, frame)
+    frame.resizeHandle:SetHeight(6)
+    frame.resizeHandle:SetPoint("BOTTOMLEFT", frame, "BOTTOMLEFT", 0, 0)
+    frame.resizeHandle:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", 0, 0)
+    frame.resizeHandle:EnableMouse(true)
+
+    frame.resizeHandle.tex = frame.resizeHandle:CreateTexture(nil, "OVERLAY")
+    frame.resizeHandle.tex:SetAllPoints()
+    frame.resizeHandle.tex:SetTexture("Interface\\Buttons\\WHITE8X8")
+    frame.resizeHandle.tex:SetVertexColor(D.title[1], D.title[2], D.title[3], 0)
+
+    frame.resizeHandle:SetScript("OnEnter", function(self)
+        self.tex:SetVertexColor(D.title[1], D.title[2], D.title[3], 0.4)
+    end)
+    frame.resizeHandle:SetScript("OnLeave", function(self)
+        if not self.dragging then
+            self.tex:SetVertexColor(D.title[1], D.title[2], D.title[3], 0)
+        end
+    end)
+
+    frame.resizeHandle:SetScript("OnMouseDown", function(self)
+        self.dragging = true
+        local _, startY = GetCursorPosition()
+        local scale = frame:GetEffectiveScale()
+        self.startY = startY / scale
+        self.startHeight = frame:GetHeight()
+        self:SetScript("OnUpdate", function(self)
+            local _, curY = GetCursorPosition()
+            curY = curY / scale
+            local delta = self.startY - curY
+            local newHeight = math.max(MIN_HEIGHT, math.min(MAX_HEIGHT, self.startHeight + delta))
+            frame:SetHeight(newHeight)
+            M:UpdateScrollbar()
+        end)
+    end)
+
+    frame.resizeHandle:SetScript("OnMouseUp", function(self)
+        self.dragging = false
+        self:SetScript("OnUpdate", nil)
+        self.tex:SetVertexColor(D.title[1], D.title[2], D.title[3], 0)
+        -- Save height
+        if BC.db and BC.db.settings then
+            BC.db.settings.trackerHeight = frame:GetHeight()
+        end
+    end)
 
     -- Load saved position
     if BC.db and BC.db.settings and BC.db.settings.trackerPosition then
@@ -117,7 +244,38 @@ local function CreateMainFrame()
     return frame
 end
 
--- (quest item use handled by ItemBar.lua)
+-- ============================================================================
+-- Scrollbar update
+-- ============================================================================
+
+function M:UpdateScrollbar()
+    if not frame or not frame.scrollbar then return end
+
+    local contentHeight = frame.content:GetHeight()
+    local viewHeight = frame.scrollFrame:GetHeight()
+
+    if contentHeight <= viewHeight then
+        -- No scrolling needed
+        frame.scrollbar:Hide()
+        frame.scrollFrame:SetVerticalScroll(0)
+        return
+    end
+
+    frame.scrollbar:Show()
+
+    local trackHeight = frame.scrollbar:GetHeight()
+    local thumbRatio = math.min(1, viewHeight / contentHeight)
+    local thumbHeight = math.max(20, trackHeight * thumbRatio)
+    frame.scrollbar.thumb:SetHeight(thumbHeight)
+
+    -- Position thumb based on scroll position
+    local maxScroll = contentHeight - viewHeight
+    local scrollPos = frame.scrollFrame:GetVerticalScroll()
+    local scrollRatio = maxScroll > 0 and (scrollPos / maxScroll) or 0
+    local thumbOffset = scrollRatio * (trackHeight - thumbHeight)
+    frame.scrollbar.thumb:ClearAllPoints()
+    frame.scrollbar.thumb:SetPoint("TOP", frame.scrollbar, "TOP", 0, -thumbOffset)
+end
 
 -- ============================================================================
 -- Quest Entry (one per tracked quest)
@@ -485,10 +643,9 @@ function M:UpdateTracker()
         zoneHeaders[i]:Hide()
     end
 
-    -- Resize frame
-    local titleHeight = frame.title:GetStringHeight()
-    frame:SetHeight(PADDING + titleHeight + 6 + totalHeight + PADDING)
+    -- Set content height (frame height is fixed / user-resizable)
     frame.content:SetHeight(totalHeight)
+    M:UpdateScrollbar()
 
     frame:Show()
 end
@@ -561,16 +718,20 @@ function M:ToggleMinimize()
     minimized = not minimized
 
     if minimized then
-        -- Hide content and arrow
-        frame.content:Hide()
+        frame.savedHeight = frame:GetHeight()
+        frame.scrollFrame:Hide()
+        frame.scrollbar:Hide()
+        if frame.resizeHandle then frame.resizeHandle:Hide() end
         frame.minimizeBtn.text:SetText("+")
         frame:SetHeight(PADDING + frame.title:GetStringHeight() + PADDING)
         if BC.HudArrow then BC.HudArrow:Hide() end
     else
-        -- Show content and arrow
-        frame.content:Show()
+        frame.scrollFrame:Show()
+        if frame.resizeHandle then frame.resizeHandle:Show() end
         frame.minimizeBtn.text:SetText("-")
+        frame:SetHeight(frame.savedHeight or DEFAULT_HEIGHT)
         M:UpdateTracker()
+        M:UpdateScrollbar()
         if BC.HudArrow then BC.HudArrow:Show() end
     end
 
@@ -606,7 +767,9 @@ function M:Initialize()
     -- Restore minimized state
     if BC.db and BC.db.settings and BC.db.settings.minimized then
         minimized = true
-        frame.content:Hide()
+        frame.scrollFrame:Hide()
+        frame.scrollbar:Hide()
+        if frame.resizeHandle then frame.resizeHandle:Hide() end
         frame.minimizeBtn.text:SetText("+")
         frame:SetHeight(PADDING + frame.title:GetStringHeight() + PADDING)
     end
