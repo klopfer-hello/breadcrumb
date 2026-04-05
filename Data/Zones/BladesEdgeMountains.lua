@@ -129,7 +129,6 @@ BC.QuestData:RegisterZone(1949, {
                 description = "Travel to Slaag's location in the giant hut",
                 mapX = 0.120,
                 mapY = 0.180,
-                objective = 1,
                 hint = "Southwest end of the area, in a giant hut",
             },
             {
@@ -137,7 +136,7 @@ BC.QuestData:RegisterZone(1949, {
                 description = "Kill Slaag",
                 mapX = 0.120,
                 mapY = 0.180,
-                objective = 2,
+                objective = 1,
                 hint = "Can loot even if not in the killing group",
             },
             {
@@ -145,7 +144,7 @@ BC.QuestData:RegisterZone(1949, {
                 description = "Collect Slaag's standard from the ground",
                 mapX = 0.120,
                 mapY = 0.180,
-                objective = 3,
+                objective = 2,
                 hint = "Spawns on ground after Slaag dies, usable by all",
             },
             {
@@ -209,14 +208,13 @@ BC.QuestData:RegisterZone(1949, {
                 description = "Travel to the Soulgrinder",
                 mapX = 0.600,
                 mapY = 0.240,
-                objective = 1,
             },
             {
                 type = "interact",
                 description = "Use the book to summon Skulloc",
                 mapX = 0.600,
                 mapY = 0.240,
-                objective = 2,
+                objective = 1,
                 hint = "Multiple adds will spawn; defeat them while the book is being used",
             },
             {
@@ -224,7 +222,7 @@ BC.QuestData:RegisterZone(1949, {
                 description = "Defeat Skulloc",
                 mapX = 0.554,
                 mapY = 0.448,
-                objective = 3,
+                objective = 2,
                 hint = "Boss spawns after ~2 minutes of defending the book",
             },
             {
@@ -232,7 +230,7 @@ BC.QuestData:RegisterZone(1949, {
                 description = "Loot Skulloc's soul from his corpse",
                 mapX = 0.554,
                 mapY = 0.448,
-                objective = 4,
+                objective = 3,
             },
             {
                 type = "turnin",

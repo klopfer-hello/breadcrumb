@@ -105,21 +105,20 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to Kirin'Var Village",
                 mapX = 0.580,
                 mapY = 0.870,
-                objective = 1,
             },
             {
                 type = "talk",
                 description = "Find and talk to the Custodian of Kirin'Var",
                 mapX = 0.580,
                 mapY = 0.870,
-                objective = 2,
+                objective = 1,
             },
             {
                 type = "interact",
                 description = "Help the Custodian in any way you can",
                 mapX = 0.580,
                 mapY = 0.870,
-                objective = 3,
+                objective = 2,
             },
             {
                 type = "turnin",
@@ -141,7 +140,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to Battle-Mage Dathric's location",
                 mapX = 0.560,
                 mapY = 0.870,
-                objective = 1,
                 hint = "Located in the tower area near other mage spirits",
             },
             {
@@ -149,7 +147,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Place Battle-Mage Dathric's item at his resting place",
                 mapX = 0.560,
                 mapY = 0.870,
-                objective = 2,
+                objective = 1,
                 hint = "Interact with the location to complete the quest",
             },
             {
@@ -180,7 +178,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to Rocket-Chief Fuselage at Area 52",
                 mapX = 0.326,
                 mapY = 0.648,
-                objective = 2,
             },
             {
                 type = "turnin",
@@ -228,14 +225,13 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to Kirin'Var Village",
                 mapX = 0.600,
                 mapY = 0.870,
-                objective = 1,
             },
             {
                 type = "kill",
                 description = "Kill Battle-mage Dathric",
                 mapX = 0.600,
                 mapY = 0.880,
-                objective = 2,
+                objective = 1,
                 hint = "Inside the town hall building; watch out for Pyroblast",
             },
             {
@@ -243,7 +239,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Collect the Registry from Battle-mage Dathric",
                 mapX = 0.600,
                 mapY = 0.880,
-                objective = 3,
+                objective = 2,
             },
             {
                 type = "turnin",
@@ -322,7 +318,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Ascend the tower to reach Archmage Vargoth",
                 mapX = 0.576,
                 mapY = 0.862,
-                objective = 1,
             },
             {
                 type = "turnin",
@@ -583,7 +578,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to Magister Theledorn",
                 mapX = 0.262,
                 mapY = 0.416,
-                objective = 2,
                 hint = "Located on the southern side against the building",
             },
             {
@@ -740,14 +734,13 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to Dr. Boom's location in Netherstorm",
                 mapX = 0.350,
                 mapY = 0.590,
-                objective = 1,
             },
             {
                 type = "interact",
                 description = "Use the bomb on Dr. Boom",
                 mapX = 0.350,
                 mapY = 0.590,
-                objective = 2,
+                objective = 1,
                 hint = "Wait for cooldown between bomb uses",
             },
             {
@@ -755,7 +748,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Defeat Dr. Boom",
                 mapX = 0.350,
                 mapY = 0.590,
-                objective = 3,
+                objective = 2,
                 hint = "Repeat bomb attacks until defeated; he has 600k+ HP",
             },
             {
@@ -939,7 +932,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to the Scrap Fields",
                 mapX = 0.490,
                 mapY = 0.590,
-                objective = 1,
                 hint = "Correct coordinates are 49, 59 (not 48, 57)",
             },
             {
@@ -947,7 +939,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Collect Scrap Metal from the Scrap Fields",
                 mapX = 0.490,
                 mapY = 0.590,
-                objective = 2,
+                objective = 1,
             },
             {
                 type = "turnin",
@@ -1010,7 +1002,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to the area southeast of the Dome",
                 mapX = 0.510,
                 mapY = 0.540,
-                objective = 1,
                 hint = "Southeast of the Dome, near broken down fel bots",
             },
             {
@@ -1018,7 +1009,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Collect Demon Parts from the ground near broken down fel bots",
                 mapX = 0.510,
                 mapY = 0.540,
-                objective = 2,
+                objective = 1,
                 hint = "Parts are on the ground, not dropped by mobs",
             },
             {
@@ -1026,7 +1017,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Kill Gan'arg Engineers if needed to access the parts",
                 mapX = 0.510,
                 mapY = 0.540,
-                objective = 3,
+                objective = 2,
                 hint = "Engineers block access but don't drop the parts",
             },
             {
@@ -1057,7 +1048,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to Doomclaw",
                 mapX = 0.500,
                 mapY = 0.570,
-                objective = 2,
                 hint = "Fast respawn (2 min 10 sec), may need to wait",
             },
             {
@@ -1065,7 +1055,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Kill Doomclaw",
                 mapX = 0.500,
                 mapY = 0.570,
-                objective = 3,
+                objective = 2,
             },
             {
                 type = "turnin",
@@ -1273,7 +1263,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to Apex's location",
                 mapX = 0.530,
                 mapY = 0.670,
-                objective = 1,
                 hint = "Apex is a large rock demon at 53, 67",
             },
             {
@@ -1281,14 +1270,14 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Drop the Crystal on Apex",
                 mapX = 0.530,
                 mapY = 0.670,
-                objective = 2,
+                objective = 1,
             },
             {
                 type = "kill",
                 description = "Defeat Apex",
                 mapX = 0.530,
                 mapY = 0.670,
-                objective = 3,
+                objective = 2,
                 hint = "~22.7k HP; use freezing trap for adds, pull to 51,71 if needed",
             },
             {
@@ -1296,14 +1285,13 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Return to Archmage Vargoth",
                 mapX = 0.582,
                 mapY = 0.864,
-                objective = 4,
             },
             {
                 type = "interact",
                 description = "Use the orb with Archmage Vargoth",
                 mapX = 0.582,
                 mapY = 0.864,
-                objective = 5,
+                objective = 3,
                 hint = "Complete the scrying ritual with the orb",
             },
             {
@@ -1367,14 +1355,13 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to the Wanted Poster location",
                 mapX = 0.321,
                 mapY = 0.647,
-                objective = 1,
             },
             {
                 type = "collect",
                 description = "Collect Annihilator Servo",
                 mapX = 0.250,
                 mapY = 0.650,
-                objective = 2,
+                objective = 1,
                 hint = "Big yellow robot at 25, 65. Can be soloed with DoT and banish.",
             },
             {
@@ -1546,7 +1533,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to the Stormspire",
                 mapX = 0.440,
                 mapY = 0.350,
-                objective = 1,
                 hint = "Located in the eastern part of Stormspire, top level of a building",
             },
             {
@@ -1570,7 +1556,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to the first triangulation point location",
                 mapX = 0.667,
                 mapY = 0.338,
-                objective = 1,
                 hint = "Stand slightly outside the area before using the device",
             },
             {
@@ -1578,7 +1563,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Use the triangulation device",
                 mapX = 0.667,
                 mapY = 0.338,
-                objective = 2,
+                objective = 1,
                 hint = "Look for an arrow mark after using the device",
             },
             {
@@ -1586,7 +1571,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Walk to the arrow mark that appears",
                 mapX = 0.458,
                 mapY = 0.360,
-                objective = 3,
                 hint = "Similar to a hunter's mark; walk to it to complete",
             },
             {
@@ -1761,7 +1745,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to the triangulation point location",
                 mapX = 0.584,
                 mapY = 0.314,
-                objective = 1,
                 hint = "Use Triangulation Device to mark the exact spot",
             },
             {
@@ -1769,7 +1752,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Use the Triangulation Device at the marked location",
                 mapX = 0.584,
                 mapY = 0.314,
-                objective = 2,
+                objective = 1,
                 hint = "Stand directly in the hunter's mark that appears",
             },
             {
@@ -1960,14 +1943,13 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to Abjurist Belmara's dwelling",
                 mapX = 0.555,
                 mapY = 0.865,
-                objective = 2,
             },
             {
                 type = "interact",
                 description = "Return the book to Abjurist Belmara's dwelling",
                 mapX = 0.555,
                 mapY = 0.865,
-                objective = 3,
+                objective = 2,
             },
             {
                 type = "turnin",
@@ -1990,7 +1972,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to Conjurer Luminrath's location",
                 mapX = 0.564,
                 mapY = 0.878,
-                objective = 1,
                 hint = "Located in the tower area",
             },
             {
@@ -1998,7 +1979,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Return Conjurer Luminrath's belongings to his home",
                 mapX = 0.564,
                 mapY = 0.878,
-                objective = 2,
+                objective = 1,
             },
             {
                 type = "turnin",
@@ -2021,7 +2002,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to Cohlien Frostweaver's location",
                 mapX = 0.550,
                 mapY = 0.870,
-                objective = 1,
                 hint = "Located in Medivh's Tower area",
             },
             {
@@ -2029,7 +2009,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Place the item at Cohlien Frostweaver's resting place",
                 mapX = 0.550,
                 mapY = 0.870,
-                objective = 2,
+                objective = 1,
             },
             {
                 type = "turnin",
@@ -2133,7 +2113,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to Invasion Point: Destroyer",
                 mapX = 0.480,
                 mapY = 0.640,
-                objective = 1,
                 hint = "Drijya may move around the area, check nearby locations",
             },
             {
@@ -2230,7 +2209,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to the mine entrance",
                 mapX = 0.260,
                 mapY = 0.430,
-                objective = 1,
                 hint = "Mine entrance at 26,43",
             },
             {
@@ -2238,7 +2216,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Kill 2 Bloodelf guards outside the mine",
                 mapX = 0.260,
                 mapY = 0.430,
-                objective = 2,
+                objective = 1,
                 hint = "Guards are at the mine entrance",
             },
             {
@@ -2246,7 +2224,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Kill 2 demon-things inside the mine",
                 mapX = 0.264,
                 mapY = 0.422,
-                objective = 3,
+                objective = 2,
                 hint = "Follow main path inside the cave",
             },
             {
@@ -2270,7 +2248,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to Manaforge Ara",
                 mapX = 0.264,
                 mapY = 0.422,
-                objective = 1,
                 hint = "Located in Netherstorm",
             },
             {
@@ -2278,7 +2255,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Enter the mine below Manaforge Ara",
                 mapX = 0.260,
                 mapY = 0.440,
-                objective = 2,
                 hint = "Mine entrance is at the base of the manaforge",
             },
             {
@@ -2286,7 +2262,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Deal with Foreman Sundown",
                 mapX = 0.270,
                 mapY = 0.370,
-                objective = 3,
+                objective = 1,
                 hint = "At tunnel end behind two tents; take first right then straight",
             },
             {
@@ -2335,7 +2311,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to the church where Naberius is located",
                 mapX = 0.630,
                 mapY = 0.790,
-                objective = 1,
                 hint = "Church at coordinates (63, 79)",
             },
             {
@@ -2343,7 +2318,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Kill the Tortured Spirits in Naberius's room",
                 mapX = 0.630,
                 mapY = 0.790,
-                objective = 2,
+                objective = 1,
                 hint = "Two adds can be pulled independently from Naberius",
             },
             {
@@ -2351,7 +2326,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Destroy Naberius",
                 mapX = 0.630,
                 mapY = 0.790,
-                objective = 3,
+                objective = 2,
                 hint = "Use LoS to avoid Frostbolt; avoid knockback near edges",
             },
             {
@@ -2594,14 +2569,13 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to Bessy's location",
                 mapX = 0.592,
                 mapY = 0.788,
-                objective = 1,
             },
             {
                 type = "interact",
                 description = "Find and interact with Bessy",
                 mapX = 0.592,
                 mapY = 0.788,
-                objective = 2,
+                objective = 1,
                 hint = "Stealth helps; manage aggro carefully around Bessy",
             },
             {
@@ -2609,7 +2583,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Escort Bessy back to Thadell",
                 mapX = 0.576,
                 mapY = 0.850,
-                objective = 3,
                 hint = "Defend Bessy from mobs; she can take hits while you bandage",
             },
             {
@@ -2633,21 +2606,20 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to Manaforge Duro",
                 mapX = 0.320,
                 mapY = 0.640,
-                objective = 1,
             },
             {
                 type = "collect",
                 description = "Obtain the Crystal from Manaforge Duro",
                 mapX = 0.320,
                 mapY = 0.640,
-                objective = 2,
+                objective = 1,
             },
             {
                 type = "interact",
                 description = "Use the Crystal on the control console to shut down Manaforge Duro",
                 mapX = 0.320,
                 mapY = 0.640,
-                objective = 3,
+                objective = 2,
                 hint = "If console doesn't respond, try logging out and back in",
             },
             {
@@ -2671,14 +2643,13 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to the Ethereum area",
                 mapX = 0.568,
                 mapY = 0.386,
-                objective = 1,
             },
             {
                 type = "interact",
                 description = "Interact with the Transponder to gather data",
                 mapX = 0.568,
                 mapY = 0.387,
-                objective = 2,
+                objective = 1,
                 hint = "Look for a single pad, not a pair of pads",
             },
             {
@@ -2750,7 +2721,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to the mana bomb location in Netherstorm",
                 mapX = 0.557,
                 mapY = 0.872,
-                objective = 1,
                 hint = "Look for a large round bulb-shaped object",
             },
             {
@@ -2758,7 +2728,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Find the remains of the weapon Kael'thas used",
                 mapX = 0.557,
                 mapY = 0.872,
-                objective = 2,
+                objective = 1,
                 hint = "The mana bomb fragment is a large round bulb",
             },
             {
@@ -2782,7 +2752,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to the shaft entrance",
                 mapX = 0.610,
                 mapY = 0.450,
-                objective = 1,
                 hint = "Entrance to the shaft @ 61,45",
             },
             {
@@ -2790,7 +2759,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Use the flame on Ya-six's corpse before it transforms",
                 mapX = 0.610,
                 mapY = 0.450,
-                objective = 2,
+                objective = 1,
                 hint = "Use flame before reaching corpse or it transforms into a monster",
             },
             {
@@ -2798,7 +2767,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Collect Ya-six's wrappings",
                 mapX = 0.610,
                 mapY = 0.450,
-                objective = 3,
+                objective = 2,
                 hint = "Avoid AoE spells that pierce walls to prevent aggro",
             },
             {
@@ -2846,7 +2815,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to the cave where Arconus the Insatiable is located",
                 mapX = 0.608,
                 mapY = 0.416,
-                objective = 1,
                 hint = "Inside cave at ~60,40. Take first left, then another left, continue down",
             },
             {
@@ -2854,7 +2822,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Encounter and defeat Arconus the Insatiable",
                 mapX = 0.608,
                 mapY = 0.416,
-                objective = 2,
+                objective = 1,
                 hint = "Use Reflection of Ya-six guardian. Go south and around to upper level",
             },
             {
@@ -2879,7 +2847,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to Manaforge Ara",
                 mapX = 0.320,
                 mapY = 0.640,
-                objective = 1,
                 hint = "Located in Netherstorm",
             },
             {
@@ -2887,7 +2854,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Disable the Manaforge Ara",
                 mapX = 0.320,
                 mapY = 0.640,
-                objective = 2,
+                objective = 1,
                 hint = "Mobs spawn in waves; elite spawns at 30 seconds remaining",
             },
             {
@@ -3022,21 +2989,19 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to Commander Ameer",
                 mapX = 0.568,
                 mapY = 0.386,
-                objective = 1,
             },
             {
                 type = "interact",
                 description = "Interact with Commander Ameer to start the escort",
                 mapX = 0.568,
                 mapY = 0.386,
-                objective = 2,
+                objective = 1,
             },
             {
                 type = "travel",
                 description = "Escort Commander Ameer to safety",
                 mapX = 0.568,
                 mapY = 0.386,
-                objective = 3,
                 hint = "Clear mobs ahead of time; use ranged attacks to avoid aggro",
             },
             {
@@ -3150,7 +3115,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to the Diagnostic Equipment",
                 mapX = 0.480,
                 mapY = 0.550,
-                objective = 1,
                 hint = "Located at 48,55 on the map",
             },
             {
@@ -3158,7 +3122,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Use the Diagnostic Equipment to run diagnostics",
                 mapX = 0.480,
                 mapY = 0.550,
-                objective = 2,
+                objective = 1,
                 hint = "Equipment location varies slightly (48,54-48,55)",
             },
             {
@@ -3245,7 +3209,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to the Stormspire",
                 mapX = 0.440,
                 mapY = 0.350,
-                objective = 2,
                 hint = "Flight point available for convenient travel",
             },
             {
@@ -3293,14 +3256,13 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to the Staging Grounds",
                 mapX = 0.570,
                 mapY = 0.376,
-                objective = 1,
             },
             {
                 type = "interact",
                 description = "Wait for the Captured Protectorate Vanguard to fight the Ethereum Gladiator",
                 mapX = 0.570,
                 mapY = 0.376,
-                objective = 2,
+                objective = 1,
                 hint = "Wait for Ethereum Gladiator yell after ~15 Assassin spam messages",
             },
             {
@@ -3308,7 +3270,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Kill the Ethereum Gladiator",
                 mapX = 0.570,
                 mapY = 0.376,
-                objective = 3,
+                objective = 2,
                 hint = "Only works when Vanguard fights the Gladiator",
             },
             {
@@ -3316,7 +3278,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Talk to the Captured Protectorate Vanguard",
                 mapX = 0.570,
                 mapY = 0.376,
-                objective = 4,
+                objective = 3,
             },
             {
                 type = "turnin",
@@ -3388,7 +3350,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to the monstrous hydra location",
                 mapX = 0.440,
                 mapY = 0.280,
-                objective = 1,
                 hint = "Small lake area; stay on rocks/land to avoid melee attacks",
             },
             {
@@ -3396,7 +3357,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Kill Markaru the monstrous hydra",
                 mapX = 0.440,
                 mapY = 0.280,
-                objective = 2,
+                objective = 1,
                 hint = "Can be kited on land; doesn't reach far from water",
             },
             {
@@ -3404,7 +3365,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Collect a sample from the monstrous hydra",
                 mapX = 0.440,
                 mapY = 0.280,
-                objective = 3,
+                objective = 2,
             },
             {
                 type = "turnin",
@@ -3434,7 +3395,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to Netherstorm",
                 mapX = 0.434,
                 mapY = 0.350,
-                objective = 2,
                 hint = "Head to Netherstorm to test the prototype",
             },
             {
@@ -3442,7 +3402,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Test the prototype in Netherstorm",
                 mapX = 0.446,
                 mapY = 0.144,
-                objective = 3,
+                objective = 2,
             },
             {
                 type = "turnin",
@@ -3472,7 +3432,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to Trelleum Mine on the southern coast",
                 mapX = 0.260,
                 mapY = 0.430,
-                objective = 2,
                 hint = "Mine entrance at southern coast near Manaforge Ara",
             },
             {
@@ -3480,7 +3439,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Collect Damning Orders from enemies in Trelleum Mine",
                 mapX = 0.260,
                 mapY = 0.430,
-                objective = 3,
+                objective = 2,
                 hint = "Drop rate ~30%, found on mobs throughout the mine",
             },
             {
@@ -3544,7 +3503,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to Eco-Dome Farfield",
                 mapX = 0.440,
                 mapY = 0.140,
-                objective = 1,
                 hint = "Located in Netherstorm",
             },
             {
@@ -3552,7 +3510,7 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Collect items from raptor egg nests",
                 mapX = 0.440,
                 mapY = 0.140,
-                objective = 2,
+                objective = 1,
                 hint = "Items are hidden in the raptor egg nests inside the dome",
             },
             {
@@ -3632,14 +3590,13 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Fly to Manaforge Ultris",
                 mapX = 0.600,
                 mapY = 0.318,
-                objective = 2,
             },
             {
                 type = "interact",
                 description = "Use the Phase Disruptor bomb on Manaforge Ultris",
                 mapX = 0.600,
                 mapY = 0.318,
-                objective = 3,
+                objective = 2,
                 hint = "Spam click the bomb in your bag when over the target area",
             },
             {
@@ -4024,7 +3981,6 @@ BC.QuestData:RegisterZone(1953, {
                 description = "Travel to Commander Ameer",
                 mapX = 0.594,
                 mapY = 0.324,
-                objective = 2,
             },
             {
                 type = "turnin",

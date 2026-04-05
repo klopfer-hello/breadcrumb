@@ -14,7 +14,7 @@ BC.StepResolver = M
 local questStates = {}
 
 -- Proximity threshold in yards for auto-advancing travel/talk steps
-local ARRIVAL_DISTANCE = 40
+local ARRIVAL_DISTANCE = 10
 
 -- Which quest the arrow points to
 local selectedQuestID = nil
@@ -257,7 +257,6 @@ local function GetMapData(uiMapID)
 end
 
 function M:CheckProximity()
-    -- Only check the selected quest's active step
     if not selectedQuestID then return end
     local questData = BC.QuestData:GetQuest(selectedQuestID)
     local qs = questStates[selectedQuestID]
@@ -266,7 +265,7 @@ function M:CheckProximity()
     local step = questData.steps[qs.activeStepIndex]
     if not step then return end
 
-    -- Only check non-objective steps
+    -- Only proximity-check non-objective, non-turnin steps
     if step.objective or step.type == "turnin" then return end
     if step.mapX == 0 and step.mapY == 0 then return end
 
@@ -282,10 +281,14 @@ function M:CheckProximity()
     local dist = math.sqrt((px - tx)^2 + (py - ty)^2)
 
     if dist < ARRIVAL_DISTANCE then
-        if not qs.reachedSteps then qs.reachedSteps = {} end
-        qs.reachedSteps[qs.activeStepIndex] = true
-        BC:Debug("Reached step " .. qs.activeStepIndex .. ": " .. step.description)
-        M:ResolveAllSteps()
+        -- Only auto-advance steps WITHOUT an objective index
+        -- Steps with objectives are tracked by the quest log and complete via Blizzard triggers
+        if not step.objective then
+            if not qs.reachedSteps then qs.reachedSteps = {} end
+            qs.reachedSteps[qs.activeStepIndex] = true
+            BC:Debug("Reached step " .. qs.activeStepIndex .. ": " .. step.description)
+            M:ResolveAllSteps()
+        end
     end
 end
 
