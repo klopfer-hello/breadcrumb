@@ -795,7 +795,14 @@ function M:Initialize()
     end)
 
     BC.Events:Register("QUEST_LOG_UPDATE", function()
-        if frame and frame:IsShown() then
+        if frame and frame:IsShown() and not minimized then
+            -- Keep selected quest expanded
+            if not M._userClick and not expandedQuest then
+                local selected = BC.StepResolver:GetSelectedQuest()
+                if selected then
+                    expandedQuest = selected
+                end
+            end
             M:UpdateTracker()
         end
     end)
