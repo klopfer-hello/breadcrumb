@@ -1,5 +1,31 @@
 # Breadcrumb - Changelog
 
+## v0.2.0
+
+### Features
+
+- **Scrollable tracker** — fixed top edge with resizable height
+- **Proximity auto-advance** — travel and talk steps auto-complete when player reaches destination
+- **Shift-click quest linking** — shift-click a quest to link it into chat (opens quest log when chat is closed)
+- **ItemBar improvements** — updates on login, properly hides/shows with tracker minimize
+
+### Quest Data
+
+- **Netherstorm** (mapID 1953): expanded to 162 quests (was 8)
+- **Blade's Edge Mountains** (mapID 1949): expanded to 155 quests (was 1)
+
+### Fixes
+
+- Resolved all 0,0 coordinate steps across quest data
+- Removed 54 redundant pre-turnin steps and 13 accept-like first steps
+- Fixed quest expand/collapse toggle and auto-expand on chain advance
+- Fixed useItem data: removed 10 hallucinated values, corrected 2 item IDs, added 9 missing
+- Fixed cross-zone mapIDs (Ishanah's Help, Torching Sunfury Hold)
+- Travel steps no longer carry objective index (prevents false completion)
+- Selected quest stays expanded on login and quest log updates
+
+---
+
 ## v0.1.0
 
 ### Initial Prototype

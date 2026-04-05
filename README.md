@@ -26,7 +26,7 @@ Shows objectives and directions for quests already in your log — designed for 
 |---|---|
 | **Game Version** | TBC Classic Anniversary (2.5.5) |
 | **Interface** | 20505 |
-| **Version** | 0.1.0 |
+| **Version** | 0.2.0 |
 
 ## Installation
 

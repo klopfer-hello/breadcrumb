@@ -2,7 +2,7 @@
 ## Title: |cFF4CAF50Breadcrumb|r - Quest Guide
 ## Notes: Step-by-step quest guide with directional arrow for TBC Anniversary.
 ## Author: Klopfer-Hello
-## Version: 0.1.0
+## Version: 0.2.0
 ## SavedVariables: BreadcrumbDB
 ## SavedVariablesPerCharacter: BreadcrumbCharDB
 ## IconTexture: Interface\Icons\Ability_Tracking
