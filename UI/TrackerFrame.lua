@@ -531,9 +531,17 @@ function M:UpdateTracker()
                 M:ShowWowheadPopup(BC.QuestData:GetWowheadUrl(questID))
             end)
 
-            -- Click handler: select + toggle expand
+            -- Click handler: select + toggle expand (shift-click opens quest log)
             entry.questID = questID
             entry:SetScript("OnClick", function(self)
+                if IsShiftKeyDown() then
+                    local qs = BC.StepResolver:GetQuestState(self.questID)
+                    if qs and qs.questLogIndex then
+                        QuestLog_SetSelection(qs.questLogIndex)
+                        ShowUIPanel(QuestLogFrame)
+                    end
+                    return
+                end
                 -- Suppress auto-expand from STEPS_UPDATED during user click
                 M._userClick = true
                 BC.StepResolver:SelectQuest(self.questID)
