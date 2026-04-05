@@ -545,8 +545,14 @@ function M:UpdateTracker()
                 if IsShiftKeyDown() then
                     local qs = BC.StepResolver:GetQuestState(self.questID)
                     if qs and qs.questLogIndex then
-                        QuestLog_SetSelection(qs.questLogIndex)
-                        ShowUIPanel(QuestLogFrame)
+                        -- If chat box is open, link quest into chat; otherwise open quest log
+                        local questLink = GetQuestLink(self.questID)
+                        if questLink and ChatEdit_InsertLink(questLink) then
+                            -- Link was inserted into chat
+                        else
+                            QuestLog_SetSelection(qs.questLogIndex)
+                            ShowUIPanel(QuestLogFrame)
+                        end
                     end
                     return
                 end
