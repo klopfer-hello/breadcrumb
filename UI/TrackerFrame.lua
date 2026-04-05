@@ -118,11 +118,15 @@ local function CreateMainFrame()
     frame.scrollFrame:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -(PADDING + SCROLLBAR_WIDTH + 2), PADDING)
     frame.scrollFrame:EnableMouseWheel(true)
 
-    -- Scrollable content child
+    -- Scrollable content child — must set size explicitly, no anchors
     frame.content = CreateFrame("Frame", nil, frame.scrollFrame)
-    frame.content:SetWidth(FRAME_WIDTH - PADDING * 2 - SCROLLBAR_WIDTH - 2)
-    frame.content:SetHeight(1)
+    frame.content:SetSize(FRAME_WIDTH - PADDING * 2 - SCROLLBAR_WIDTH - 2, 1)
     frame.scrollFrame:SetScrollChild(frame.content)
+
+    -- Update content width when scroll frame resizes
+    frame.scrollFrame:SetScript("OnSizeChanged", function(self, w, h)
+        frame.content:SetWidth(w)
+    end)
 
     -- Mouse wheel scrolling
     frame.scrollFrame:SetScript("OnMouseWheel", function(self, delta)
@@ -530,7 +534,10 @@ function M:UpdateTracker()
             -- Click handler: select + toggle expand
             entry.questID = questID
             entry:SetScript("OnClick", function(self)
+                -- Suppress auto-expand from STEPS_UPDATED during user click
+                M._userClick = true
                 BC.StepResolver:SelectQuest(self.questID)
+                M._userClick = false
                 if expandedQuest == self.questID then
                     expandedQuest = nil
                 else
@@ -776,10 +783,12 @@ function M:Initialize()
 
     BC.Events:Register("STEPS_UPDATED", function()
         if not minimized then
-            -- Auto-expand the selected quest
-            local selected = BC.StepResolver:GetSelectedQuest()
-            if selected then
-                expandedQuest = selected
+            -- Auto-expand selected quest (but not during user clicks — they toggle manually)
+            if not M._userClick then
+                local selected = BC.StepResolver:GetSelectedQuest()
+                if selected then
+                    expandedQuest = selected
+                end
             end
             M:UpdateTracker()
         end

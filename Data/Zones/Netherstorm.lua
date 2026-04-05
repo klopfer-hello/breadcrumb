@@ -216,19 +216,12 @@ BC.QuestData:RegisterZone(1953, {
         next = 10312,
         steps = {
             {
-                type = "talk",
-                description = "Speak with Custodian Dieworth",
-                mapX = 0.574,
-                mapY = 0.862,
+                type = "kill",
+                description = "Destroy Malevolent Spirits",
+                mapX = 0.580,
+                mapY = 0.870,
                 objective = 1,
-            },
-            {
-                type = "collect",
-                description = "Collect Malevolent Remnants",
-                mapX = 0.574,
-                mapY = 0.862,
-                objective = 2,
-                hint = "Remnants drop from mobs in Kirin'Var Village area",
+                hint = "Kill 20 spirits around Kirin'Var Village",
             },
             {
                 type = "turnin",
@@ -293,11 +286,19 @@ BC.QuestData:RegisterZone(1953, {
         steps = {
             {
                 type = "kill",
-                description = "Kill mana creatures in the village ruins",
+                description = "Kill Mana Seekers",
                 mapX = 0.574,
                 mapY = 0.862,
                 objective = 1,
-                hint = "Mana creatures are all around the area, very easy to solo",
+                hint = "Around the Kirin'Var Village ruins",
+            },
+            {
+                type = "kill",
+                description = "Kill Mageslayers",
+                mapX = 0.580,
+                mapY = 0.870,
+                objective = 2,
+                hint = "Also around Kirin'Var Village ruins",
             },
             {
                 type = "turnin",
