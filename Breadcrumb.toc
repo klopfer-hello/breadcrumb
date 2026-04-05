@@ -5,7 +5,7 @@
 ## Version: 0.1.0
 ## SavedVariables: BreadcrumbDB
 ## SavedVariablesPerCharacter: BreadcrumbCharDB
-## IconTexture: Interface\AddOns\Breadcrumb\media\icon.blp
+## IconTexture: Interface\Icons\Ability_Tracking
 
 # https://warcraft.wiki.gg/wiki/Addon_Categories
 ## Category: Quests
@@ -22,3 +22,17 @@
 
 # Core
 Core.lua
+
+# Data (registry first, then zone files)
+Data\QuestData.lua
+Data\Zones\BladesEdgeMountains.lua
+Data\Zones\Netherstorm.lua
+
+# Core Systems
+Core\StepResolver.lua
+
+# Interface
+UI\TrackerFrame.lua
+UI\HudArrow.lua
+UI\ItemBar.lua
+UI\MinimapButton.lua

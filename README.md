@@ -2,15 +2,23 @@
 
 A step-by-step quest guide addon for WoW TBC Classic Anniversary Edition.
 
-Replaces the default quest tracker with an ordered guide showing exactly where to go and what to do, with a directional arrow pointing to the next objective.
+Shows objectives and directions for quests already in your log — designed for efficient endgame questing and gold farming through quest completion.
 
 ## Features
 
-- Step-by-step quest guide with ordered objectives
-- Minimap directional arrow pointing to the next step
-- World map pins for quest objectives
-- AI-enriched quest data with natural language hints (generated offline at build time)
-- Automatic step progression based on live quest state
+- Multi-quest tracker with step-by-step objectives
+- Quests grouped by zone with collapsible headers
+- Click a quest to expand all steps and select it for the arrow
+- Free-floating HUD directional arrow pointing to active objective
+- "Travel to: Zone Name" hint when objective is in another zone
+- Quest chain auto-advance on turnin
+- Clickable quest item button (e.g. Archmage Vargoth's Staff)
+- Wowhead URL popup for quick quest lookup
+- Group quest indicator `[5]`
+- Minimap button (left-click: toggle, right-click: toggle arrow)
+- Minimize tracker to title bar (hides arrow too)
+- AI-enriched quest data with natural language hints
+- Syling Tracker-inspired dark theme UI
 
 ## Compatibility
 
@@ -29,19 +37,18 @@ Install via [CurseForge](https://www.curseforge.com/wow/addons) or any CurseForg
 ### Manual
 
 1. Download the latest release
-2. Extract to `World of Warcraft/_classic_/Interface/AddOns/Breadcrumb`
-3. Restart WoW or `/reload`
+2. Extract to `Interface/AddOns/Breadcrumb`
+3. `/reload`
 
 ## Slash Commands
 
 | Command | Description |
 |---|---|
 | `/bc` | Show help |
+| `/bc status` | Show tracking state and debug info |
+| `/bc arrow` | Toggle HUD arrow |
+| `/bc tracker` | Toggle tracker frame |
 | `/bc debug` | Toggle debug mode |
-
-## Optional Companion Addons
-
-- **Questie** — Breadcrumb detects Questie and defers map markers to avoid duplication. Recommended for group quest awareness.
 
 ## License
 
