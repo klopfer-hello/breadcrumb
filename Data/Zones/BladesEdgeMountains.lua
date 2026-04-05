@@ -63,6 +63,7 @@ BC.QuestData:RegisterZone(1949, {
     {
         id = 10995,
         name = "Grulloc Has Two Skulls",
+        group = 5,
         prereq = 10983,
         next = 10996,
         steps = {
@@ -94,22 +95,23 @@ BC.QuestData:RegisterZone(1949, {
     {
         id = 10996,
         name = "Maggoc's Treasure Chest",
+        group = 5,
         prereq = 10995,
         next = 10997,
         steps = {
             {
                 type = "kill",
                 description = "Kill Maggoc",
-                mapX = 0.000,
-                mapY = 0.000,
+                mapX = 0.554,
+                mapY = 0.448,
                 objective = 1,
                 hint = "Chest drops for all questers, even if not in killing group",
             },
             {
                 type = "collect",
                 description = "Loot Maggoc's Treasure Chest",
-                mapX = 0.000,
-                mapY = 0.000,
+                mapX = 0.554,
+                mapY = 0.448,
                 objective = 2,
                 hint = "Chest appears on ground after Maggoc dies",
             },
@@ -125,6 +127,7 @@ BC.QuestData:RegisterZone(1949, {
     {
         id = 10997,
         name = "Even Gronn Have Standards",
+        group = 5,
         prereq = 10996,
         next = 10998,
         steps = {
@@ -233,16 +236,16 @@ BC.QuestData:RegisterZone(1949, {
             {
                 type = "kill",
                 description = "Defeat Skulloc",
-                mapX = 0.000,
-                mapY = 0.000,
+                mapX = 0.554,
+                mapY = 0.448,
                 objective = 3,
                 hint = "Boss spawns after ~2 minutes of defending the book",
             },
             {
                 type = "collect",
                 description = "Loot Skulloc's soul from his corpse",
-                mapX = 0.000,
-                mapY = 0.000,
+                mapX = 0.554,
+                mapY = 0.448,
                 objective = 4,
             },
             {
