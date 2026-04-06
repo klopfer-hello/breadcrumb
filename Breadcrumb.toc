@@ -29,6 +29,7 @@ Data\Zones\BladesEdgeMountains.lua
 Data\Zones\Netherstorm.lua
 Data\Zones\ShadowmoonValley.lua
 Data\Zones\ShattrathCity.lua
+Data\Zones\TerokkarForest.lua
 
 # Core Systems
 Core\StepResolver.lua
