@@ -393,18 +393,11 @@ BC.QuestData:RegisterZone(1953, {
         group = 2,
         steps = {
             {
-                type = "interact",
-                description = "Activate Maxx A. Million Mk. V",
-                mapX = 0.314,
-                mapY = 0.566,
-                objective = 1,
-            },
-            {
-                type = "kill",
+                type = "escort",
                 description = "Protect Maxx A. Million Mk. V while he collects 3 items in the city",
                 mapX = 0.314,
                 mapY = 0.566,
-                objective = 2,
+                objective = 1,
                 hint = "Let him tank, clear adds before starting if possible",
             },
             {
@@ -1345,12 +1338,6 @@ BC.QuestData:RegisterZone(1953, {
         group = 2,
         steps = {
             {
-                type = "travel",
-                description = "Travel to the Wanted Poster location",
-                mapX = 0.321,
-                mapY = 0.647,
-            },
-            {
                 type = "collect",
                 description = "Collect Annihilator Servo",
                 mapX = 0.250,
@@ -2048,6 +2035,7 @@ BC.QuestData:RegisterZone(1953, {
         id = 10309,
         name = "It's a Fel Reaver, But with Heart",
         group = 2,
+        useItem = 29447,
         steps = {
             {
                 type = "kill",

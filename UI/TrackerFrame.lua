@@ -611,10 +611,12 @@ function M:UpdateTracker()
                     local desc = step.description
                     if step.objective then
                         local obj = BC.StepResolver:GetObjective(questID, step.objective)
-                        if obj and not obj.done then
-                            desc = obj.have .. "/" .. obj.need .. " " .. desc
-                        elseif obj and obj.done then
-                            desc = obj.need .. "/" .. obj.need .. " " .. desc
+                        if obj and not obj.isEvent then
+                            if not obj.done then
+                                desc = obj.have .. "/" .. obj.need .. " " .. desc
+                            else
+                                desc = obj.need .. "/" .. obj.need .. " " .. desc
+                            end
                         end
                     end
                     row.text:SetText(desc)
@@ -648,7 +650,7 @@ function M:UpdateTracker()
                     local desc = step.description
                     if step.objective then
                         local obj = BC.StepResolver:GetObjective(questID, step.objective)
-                        if obj and not obj.done then
+                        if obj and not obj.done and not obj.isEvent then
                             desc = obj.have .. "/" .. obj.need .. " " .. desc
                         end
                     end

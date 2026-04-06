@@ -67,12 +67,15 @@ function M:ScanAllQuests()
                 local numObjectives = GetNumQuestLeaderBoards(i)
                 for j = 1, numObjectives do
                     local text, objectiveType, finished = GetQuestLogLeaderBoard(j, i)
-                    local have, need = 0, 0
+                    local have, need, isEvent = 0, 0, false
                     if text then
                         local h, n = text:match("(%d+)/(%d+)")
                         if h and n then
                             have = tonumber(h)
                             need = tonumber(n)
+                        else
+                            -- Event-type objective (escort, protect) — no numeric progress
+                            isEvent = true
                         end
                     end
                     qs.objectives[j] = {
@@ -81,6 +84,7 @@ function M:ScanAllQuests()
                         done = finished or false,
                         have = have,
                         need = need,
+                        isEvent = isEvent,
                     }
                 end
 
