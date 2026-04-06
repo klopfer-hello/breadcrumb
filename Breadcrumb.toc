@@ -27,6 +27,8 @@ Core.lua
 Data\QuestData.lua
 Data\Zones\BladesEdgeMountains.lua
 Data\Zones\Netherstorm.lua
+Data\Zones\ShadowmoonValley.lua
+Data\Zones\ShattrathCity.lua
 
 # Core Systems
 Core\StepResolver.lua
