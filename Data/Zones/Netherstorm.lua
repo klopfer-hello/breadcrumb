@@ -2300,18 +2300,10 @@ BC.QuestData:RegisterZone(1953, {
             },
             {
                 type = "kill",
-                description = "Kill the Tortured Spirits in Naberius's room",
-                mapX = 0.630,
-                mapY = 0.790,
-                objective = 1,
-                hint = "Two adds can be pulled independently from Naberius",
-            },
-            {
-                type = "kill",
                 description = "Destroy Naberius",
                 mapX = 0.630,
                 mapY = 0.790,
-                objective = 2,
+                objective = 1,
                 hint = "Use LoS to avoid Frostbolt; avoid knockback near edges",
             },
             {

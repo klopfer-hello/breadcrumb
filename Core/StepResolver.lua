@@ -14,7 +14,7 @@ BC.StepResolver = M
 local questStates = {}
 
 -- Proximity threshold in yards for auto-advancing travel/talk steps
-local ARRIVAL_DISTANCE = 10
+local ARRIVAL_DISTANCE = 50
 
 -- Which quest the arrow points to
 local selectedQuestID = nil
