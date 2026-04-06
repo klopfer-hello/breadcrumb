@@ -1,3 +1,4 @@
 .claude
 .release
 .pkgmeta.bak
+*.code-workspace

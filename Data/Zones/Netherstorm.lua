@@ -3912,22 +3912,15 @@ BC.QuestData:RegisterZone(1953, {
     {
         id = 10924,
         name = "Bloody Imp-ossible!",
+        useItem = 31815,
         steps = {
-            {
-                type = "talk",
-                description = "Talk to Zeppit to summon him",
-                mapX = 0.664,
-                mapY = 0.672,
-                objective = 1,
-                hint = "Summon Zeppit first before killing mobs",
-            },
             {
                 type = "kill",
                 description = "Kill Warp Chasers while Zeppit collects blood",
                 mapX = 0.664,
                 mapY = 0.672,
-                objective = 2,
-                hint = "Many Warp Chasers spawn outside the quest giver area",
+                objective = 1,
+                hint = "Summon Zeppit first before killing mobs",
             },
             {
                 type = "turnin",
