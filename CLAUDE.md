@@ -104,7 +104,7 @@ BC.QuestData:RegisterZone(1953, {  -- Netherstorm (in-game mapID)
 | Nagrand | 1951 |
 | Zangarmarsh | 1946 |
 | Blade's Edge Mountains | 1949 |
-| Hellfire Peninsula | ? |
+| Hellfire Peninsula | 1944 |
 | Shadowmoon Valley | 1948 |
 | Outland (continent) | 1945 |
 
