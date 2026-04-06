@@ -2562,7 +2562,7 @@ BC.QuestData:RegisterZone(1953, {
                 hint = "Stealth helps; clear aggro around Bessy first",
             },
             {
-                type = "travel",
+                type = "escort",
                 description = "Escort Bessy back to Thadell",
                 mapX = 0.576,
                 mapY = 0.850,
@@ -2974,17 +2974,11 @@ BC.QuestData:RegisterZone(1953, {
                 mapY = 0.386,
             },
             {
-                type = "interact",
-                description = "Interact with Commander Ameer to start the escort",
-                mapX = 0.568,
-                mapY = 0.386,
-                objective = 1,
-            },
-            {
-                type = "travel",
+                type = "escort",
                 description = "Escort Commander Ameer to safety",
                 mapX = 0.568,
                 mapY = 0.386,
+                objective = 1,
                 hint = "Clear mobs ahead of time; use ranged attacks to avoid aggro",
             },
             {
