@@ -16,6 +16,7 @@ BC.QuestData:RegisterZone(1955, {
             {
                 type = "collect",
                 description = "Collect Basilisk Eyes",
+                mapID = 1952,
                 mapX = 0.371,
                 mapY = 0.500,
                 objective = 1,
