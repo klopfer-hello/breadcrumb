@@ -38,6 +38,76 @@ BC.QuestData:RegisterZone(1948, {
         },
     },
     -- ========================================================================
+    -- Spleendid! chain
+    -- ========================================================================
+    {
+        id = 10661,
+        name = "Spleendid!",
+        next = 10677,
+        steps = {
+            {
+                type = "collect",
+                description = "Collect Spleens",
+                mapX = 0.366,
+                mapY = 0.552,
+                objective = 1,
+                hint = "Large camp of felfire diemetradons between Legion Hold and The Deathforge",
+            },
+            {
+                type = "turnin",
+                description = "Return to Gnomus",
+                mapX = 0.366,
+                mapY = 0.552,
+                npc = "Gnomus",
+            },
+        },
+    },
+    {
+        id = 10677,
+        name = "The Second Course...",
+        prereq = 10661,
+        next = 10678,
+        steps = {
+            {
+                type = "collect",
+                description = "Collect an overdeveloped felfire gizzard",
+                mapX = 0.560,
+                mapY = 0.520,
+                objective = 1,
+                hint = "Drop rate is decent, found near the lake. Easy to kill.",
+            },
+            {
+                type = "turnin",
+                description = "Return to Gnomus",
+                mapX = 0.366,
+                mapY = 0.552,
+                npc = "Gnomus",
+            },
+        },
+    },
+    {
+        id = 10678,
+        name = "The Main Course!",
+        prereq = 10677,
+        steps = {
+            {
+                type = "kill",
+                description = "Kill Felspine",
+                mapX = 0.560,
+                mapY = 0.420,
+                objective = 1,
+                hint = "Large target, soloable but watch for acid damage",
+            },
+            {
+                type = "turnin",
+                description = "Return to Gnomus",
+                mapX = 0.366,
+                mapY = 0.552,
+                npc = "Gnomus",
+            },
+        },
+    },
+    -- ========================================================================
     -- The Hand of Gul'dan chain
     -- ========================================================================
     {
