@@ -244,6 +244,100 @@ BC.QuestData:RegisterZone(1948, {
             },
         },
     },
+    -- ========================================================================
+    -- Illidari-Bane Shard chain
+    -- ========================================================================
+    {
+        id = 10621,
+        name = "Illidari-Bane Shard",
+        prereq = 10626,
+        next = 10626,
+        steps = {
+            {
+                type = "collect",
+                description = "Obtain an Illidari-Bane Shard",
+                mapX = 0.000,
+                mapY = 0.000,
+                objective = 1,
+            },
+            {
+                type = "turnin",
+                description = "Return to Ordinn Thunderfist",
+                mapX = 0.368,
+                mapY = 0.548,
+                npc = "Ordinn Thunderfist",
+            },
+        },
+    },
+    -- ========================================================================
+    -- Capture the Weapons chain
+    -- ========================================================================
+    {
+        id = 10626,
+        name = "Capture the Weapons",
+        group = 3,
+        prereq = 10621,
+        steps = {
+            {
+                type = "kill",
+                description = "Capture Makazradon's weapon prototype",
+                mapX = 0.368,
+                mapY = 0.548,
+                objective = 1,
+                hint = "Can be blinded (Rogue) or banished/feared (Warlock)",
+            },
+            {
+                type = "kill",
+                description = "Capture the other weapon prototype",
+                mapX = 0.368,
+                mapY = 0.548,
+                objective = 2,
+                hint = "Cannot be blinded/feared; use evasion or drain life",
+            },
+            {
+                type = "turnin",
+                description = "Return to Ordinn Thunderfist",
+                mapX = 0.368,
+                mapY = 0.548,
+                npc = "Ordinn Thunderfist",
+            },
+        },
+    },
+    -- ========================================================================
+    -- Illidari-Bane Shard chain
+    -- ========================================================================
+    {
+        id = 10662,
+        name = "The Hermit Smith",
+        prereq = 10621,
+        next = 10663,
+        steps = {
+            {
+                type = "talk",
+                description = "Talk to Ordinn Thunderfist",
+                mapX = 0.368,
+                mapY = 0.548,
+                objective = 1,
+            },
+            {
+                type = "travel",
+                description = "Travel to David Wayne",
+                mapX = 0.776,
+                mapY = 0.387,
+                hint = "Bring mats for next quest: 4 heavy knothide leather, adamantite frame, demon warding totem",
+            },
+            {
+                type = "turnin",
+                description = "Return to David Wayne",
+                mapX = 0.774,
+                mapY = 0.386,
+                npc = "David Wayne",
+            },
+        },
+    },
+    -- ========================================================================
+    -- The Hand of Gul'dan chain
+    -- ========================================================================
     {
         id = 10804,
         name = "Kindness",

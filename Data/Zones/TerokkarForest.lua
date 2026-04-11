@@ -7,6 +7,80 @@ local ADDON_NAME, BC = ...
 
 BC.QuestData:RegisterZone(1952, {
     -- ========================================================================
+    -- Additional Materials chain
+    -- ========================================================================
+    {
+        id = 10664,
+        name = "Additional Materials",
+        prereq = 10662,
+        next = 10663,
+        steps = {
+            {
+                type = "collect",
+                description = "Collect materials for the smith",
+                mapX = 0.774,
+                mapY = 0.386,
+                objective = 1,
+                hint = "Speak with David Wayne to obtain or deliver materials",
+            },
+            {
+                type = "turnin",
+                description = "Return to David Wayne",
+                mapX = 0.774,
+                mapY = 0.386,
+                npc = "David Wayne",
+            },
+        },
+    },
+    -- ========================================================================
+    -- Bane of the Illidari chain
+    -- ========================================================================
+    {
+        id = 10676,
+        name = "Bane of the Illidari",
+        prereq = 10621,
+        next = 10679,
+        steps = {
+            {
+                type = "turnin",
+                description = "Return to David Wayne",
+                mapX = 0.774,
+                mapY = 0.386,
+                npc = "David Wayne",
+            },
+        },
+    },
+    {
+        id = 10679,
+        name = "Quenching the Blade",
+        useItem = 30875,
+        prereq = 10676,
+        steps = {
+            {
+                type = "travel",
+                description = "Travel to the Hand of Gul'dan",
+                mapX = 0.774,
+                mapY = 0.386,
+                hint = "Instance location - requires entry",
+            },
+            {
+                type = "interact",
+                description = "Quench the sword in the lava of the Hand of Gul'dan",
+                mapX = 0.774,
+                mapY = 0.386,
+                objective = 1,
+                hint = "Complete the quenching ritual in the instance",
+            },
+            {
+                type = "turnin",
+                description = "Return to David Wayne",
+                mapX = 0.774,
+                mapY = 0.386,
+                npc = "David Wayne",
+            },
+        },
+    },
+    -- ========================================================================
     -- Missing Friends chain
     -- ========================================================================
     {
@@ -96,6 +170,111 @@ BC.QuestData:RegisterZone(1952, {
                 mapX = 0.310,
                 mapY = 0.764,
                 npc = "Oakun",
+            },
+        },
+    },
+    -- ========================================================================
+    -- Additional Materials chain
+    -- ========================================================================
+    {
+        id = 10665,
+        name = "Fresh from the Mechanar",
+        group = 5,
+        prereq = 10664,
+        next = 10666,
+        steps = {
+            {
+                type = "travel",
+                description = "Travel to the Mechanar",
+                mapX = 0.774,
+                mapY = 0.386,
+            },
+            {
+                type = "collect",
+                description = "Smuggle a manacell out of the Mechanar",
+                mapX = 0.774,
+                mapY = 0.386,
+                objective = 1,
+                hint = "Located in a box at the wall before Mechano-Lord Capacitus",
+            },
+            {
+                type = "turnin",
+                description = "Return to David Wayne",
+                mapX = 0.774,
+                mapY = 0.386,
+                npc = "David Wayne",
+            },
+        },
+    },
+    {
+        id = 10666,
+        name = "The Lexicon Demonica",
+        group = 5,
+        prereq = 10665,
+        next = 10670,
+        steps = {
+            {
+                type = "collect",
+                description = "Retrieve the Lexicon Demonica",
+                mapX = 0.774,
+                mapY = 0.386,
+                objective = 1,
+                hint = "Drops from Vorpil in Shadow Labyrinth (normal mode only, not heroic)",
+            },
+            {
+                type = "turnin",
+                description = "Return to David Wayne",
+                mapX = 0.774,
+                mapY = 0.386,
+                npc = "David Wayne",
+            },
+        },
+    },
+    {
+        id = 10667,
+        name = "Underworld Loam",
+        group = 5,
+        prereq = 10670,
+        next = 10676,
+        steps = {
+            {
+                type = "collect",
+                description = "Collect Underworld Loam",
+                mapX = 0.774,
+                mapY = 0.386,
+                objective = 1,
+                hint = "Drops from mobs in Steamvaults dungeon (TBC)",
+            },
+            {
+                type = "turnin",
+                description = "Return to David Wayne",
+                mapX = 0.774,
+                mapY = 0.386,
+                npc = "David Wayne",
+            },
+        },
+    },
+    {
+        id = 10670,
+        name = "Tear of the Earthmother",
+        group = 5,
+        prereq = 10666,
+        next = 10667,
+        steps = {
+            {
+                type = "kill",
+                description = "Obtain the Tear of the Earthmother from Warbringer O'mrogg",
+                mapX = 0.774,
+                mapY = 0.386,
+                objective = 1,
+                hint = "O'mrogg is in Shattered Halls; cannot be completed on Heroic difficulty",
+            },
+            {
+                type = "turnin",
+                description = "Return to David Wayne",
+                mapX = 0.774,
+                mapY = 0.386,
+                npc = "David Wayne",
             },
         },
     },
